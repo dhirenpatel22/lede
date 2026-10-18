@@ -309,9 +309,9 @@
 			"blockGap": "1.5rem",
 			"padding": {
 				"top": "0",
-				"right": "var(--the-first--gutter, 16px)",
+				"right": "var(--lede--gutter, 16px)",
 				"bottom": "0",
-				"left": "var(--the-first--gutter, 16px)"
+				"left": "var(--lede--gutter, 16px)"
 			}
 		},
 		"typography": {

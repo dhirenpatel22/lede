@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="The First">
-	<description>WordPress Coding Standards for The First theme.</description>
+<ruleset name="Lede">
+	<description>WordPress Coding Standards for Lede theme.</description>
 
 	<file>.</file>
 	<exclude-pattern>/vendor/*</exclude-pattern>
@@ -18,7 +18,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="the-first"/>
+				<element value="lede"/>
 			</property>
 		</properties>
 	</rule>
@@ -26,7 +26,7 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="the_first"/>
+				<element value="lede"/>
 			</property>
 		</properties>
 	</rule>

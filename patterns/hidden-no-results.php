@@ -1,16 +1,16 @@
 <?php
 /**
  * Title: No results
- * Slug: the-first/hidden-no-results
+ * Slug: lede/hidden-no-results
  * Categories: posts
  * Inserter: no
  *
- * @package TheFirst
+ * @package Lede
  */
 
 ?>
 <!-- wp:paragraph -->
-<p><?php esc_html_e( 'Nothing matched. Try a different search.', 'the-first' ); ?></p>
+<p><?php esc_html_e( 'Nothing matched. Try a different search.', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:pattern {"slug":"the-first/hidden-search"} /-->
+<!-- wp:pattern {"slug":"lede/hidden-search"} /-->

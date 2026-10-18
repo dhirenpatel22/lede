@@ -1,4 +1,4 @@
-# The First
+# Lede
 
 A lean base **parent** block theme for full site editing (FSE) WordPress sites. Each client project runs as a child theme on top of it.
 
@@ -16,7 +16,7 @@ A lean base **parent** block theme for full site editing (FSE) WordPress sites. 
 ## Structure
 
 ```
-the-first/
+lede/
 ├── style.css               Theme header + rules theme.json can't express
 ├── assets/css/layout.css   Breakpoints, page gutters, grids, sidebar layout
 ├── theme.json              Design tokens, element and block styles
@@ -57,20 +57,20 @@ All patterns appear in the inserter under core categories (Banners, Services, Te
 
 | Pattern | Slug |
 |---|---|
-| Hero: centered (dark) | `the-first/hero-home` |
-| Hero: text and image | `the-first/hero-split` |
-| Features / services grid | `the-first/features-grid` |
-| Stats | `the-first/stats` |
-| Testimonials | `the-first/testimonials` |
-| Pricing table | `the-first/pricing` |
-| FAQ (accordion) | `the-first/faq` |
-| Team | `the-first/team` |
-| Logo cloud | `the-first/logo-cloud` |
-| Call to action: banner | `the-first/cta-banner` |
-| Contact | `the-first/contact-section` |
-| About: introduction | `the-first/about-intro` |
-| Latest posts | `the-first/featured-posts` |
-| Footer | `the-first/footer` (also offered when replacing the footer part) |
+| Hero: centered (dark) | `lede/hero-home` |
+| Hero: text and image | `lede/hero-split` |
+| Features / services grid | `lede/features-grid` |
+| Stats | `lede/stats` |
+| Testimonials | `lede/testimonials` |
+| Pricing table | `lede/pricing` |
+| FAQ (accordion) | `lede/faq` |
+| Team | `lede/team` |
+| Logo cloud | `lede/logo-cloud` |
+| Call to action: banner | `lede/cta-banner` |
+| Contact | `lede/contact-section` |
+| About: introduction | `lede/about-intro` |
+| Latest posts | `lede/featured-posts` |
+| Footer | `lede/footer` (also offered when replacing the footer part) |
 
 Notes:
 - **Hero patterns contain the page's `h1`.** Use them with the **Page (No Title)** template, otherwise the page has two `h1`s.
@@ -122,7 +122,7 @@ Font sizes: `xs` (13px), `sm` (15px), `md` (body: 18px mobile → 20px desktop),
 - **Changing the font in a child theme:** add the WOFF2 files and a `fontFamilies` entry to the child `theme.json`, set `styles.typography.fontFamily`, and repoint the preload:
 
 ```php
-add_filter( 'the_first_preload_fonts', function () {
+add_filter( 'lede_preload_fonts', function () {
 	return array( get_theme_file_uri( 'assets/fonts/brand/Brand-Variable.woff2' ) ); // or array() to disable.
 } );
 ```
@@ -161,11 +161,11 @@ Grids opt in with a class on the grid Group or Post Template:
 
 | Class | <600 | 600–767 | 768–1023 | ≥1024 | Used by |
 |---|---|---|---|---|---|
-| `the-first-grid-2` | 1 | 1 | 1 | 2 | Split hero, about, contact |
-| `the-first-grid-3` | 1 | 1 | 3 | 3 | Latest posts |
-| `the-first-grid-3-wide` | 1 | 1 | 1 | 3 | Pricing, testimonials |
-| `the-first-grid-2-3` | 1 | 2 | 2 | 3 | Features, blog grid |
-| `the-first-grid-4` | 1 | 2 | 2 | 4 | Team, stats |
+| `lede-grid-2` | 1 | 1 | 1 | 2 | Split hero, about, contact |
+| `lede-grid-3` | 1 | 1 | 3 | 3 | Latest posts |
+| `lede-grid-3-wide` | 1 | 1 | 1 | 3 | Pricing, testimonials |
+| `lede-grid-2-3` | 1 | 2 | 2 | 3 | Features, blog grid |
+| `lede-grid-4` | 1 | 2 | 2 | 4 | Team, stats |
 
 Remove the class (Block settings → Advanced → Additional CSS class) to use the editor's own grid controls instead.
 
@@ -205,7 +205,7 @@ wp-content/themes/client-name/
 ```css
 /*
 Theme Name: Client Name
-Template:   the-first
+Template:   lede
 Version:    1.0.0
 */
 ```
@@ -214,7 +214,7 @@ The parent always loads its own stylesheet. If the child has CSS of its own, enq
 
 ```php
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'client-name', get_stylesheet_uri(), array( 'the-first-style' ), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'client-name', get_stylesheet_uri(), array( 'lede-style' ), wp_get_theme()->get( 'Version' ) );
 } );
 ```
 
@@ -236,7 +236,7 @@ Also set these in `wp-config.php`, not the theme: `DISALLOW_FILE_EDIT`, `WP_POST
 ## Submitting to WordPress.org
 
 ```bash
-composer zip          # builds dist/the-first-<version>.zip, leaving out everything in .distignore
+composer zip          # builds dist/lede-<version>.zip, leaving out everything in .distignore
 ```
 
 The ZIP holds only theme files: no `vendor/`, Composer or PHPCS files, `bin/`, dotfiles, `README.md` or `CHANGELOG.md`. WordPress.org reads `readme.txt` (description, FAQ, changelog, copyright and the licences of bundled resources).
@@ -245,7 +245,7 @@ Checked on 2026-10-18 against the built ZIP:
 
 | Check | Result |
 |---|---|
-| Theme Check plugin (what the upload runs) | Passed all 9,275 tests; one INFO note confirming the single text domain `the-first` |
+| Theme Check plugin (what the upload runs) | Passed all 9,275 tests; one INFO note confirming the single text domain `lede` |
 | WPCS + PHPCompatibility (PHP 8.0+, WP 6.9+) | 0 errors, 0 warnings |
 | Block validation on 6.9.10 (minimum) and 7.1.3 (tested up to) | 0 invalid blocks, no missing blocks |
 | PHP notices with `WP_DEBUG` on (all templates, logged in and out, editor and Site Editor) | None on 6.9.10 or 7.1.3 |
@@ -255,7 +255,7 @@ Checked on 2026-10-18 against the built ZIP:
 | Tags | Only official tags from the WordPress.org feature list |
 
 Before submitting:
-- **Name:** a theme called "First" (`first`) already exists, so "The First" risks a "too similar" rejection. A rename touches the text domain, `the_first_` prefixes, `the-first/` pattern slugs and `the-first-` CSS classes.
+- **Name:** "Lede" (`lede`) had no registered slug and no similar theme name in the directory on 2026-10-18. WordPress.org also blocks slugs of removed or rejected themes, which the public directory doesn't show, so the upload is the final check.
 - Keep `Tested up to` at the current WordPress major when you submit.
 
 ## Development

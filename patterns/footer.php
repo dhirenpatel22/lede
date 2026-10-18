@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Footer
- * Slug: the-first/footer
+ * Slug: lede/footer
  * Categories: footer
  * Block Types: core/template-part/footer
  *
- * @package TheFirst
+ * @package Lede
  */
 
 ?>
@@ -29,7 +29,7 @@
 <p class="has-xs-font-size">
 <?php
 /* translators: %s: WordPress link. */
-printf( esc_html__( 'Powered by %s', 'the-first' ), '<a href="' . esc_url( __( 'https://wordpress.org', 'the-first' ) ) . '" rel="nofollow">WordPress</a>' );
+printf( esc_html__( 'Powered by %s', 'lede' ), '<a href="' . esc_url( __( 'https://wordpress.org', 'lede' ) ) . '" rel="nofollow">WordPress</a>' );
 ?>
 </p>
 <!-- /wp:paragraph --></div>
