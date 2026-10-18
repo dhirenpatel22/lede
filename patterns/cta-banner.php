@@ -1,38 +1,28 @@
 <?php
 /**
- * Title: Call to Action — Banner
- * Slug: the-first/cta-banner
- * Categories: the-first_cta
- * Viewport Width: 1280
- * Description: Full-width accent-coloured CTA banner with heading, sub-copy, and a button.
- * Keywords: cta, banner, call to action, conversion
+ * Title: Call to action: banner
+ * Slug: lede/cta-banner
+ * Categories: call-to-action
+ * Keywords: cta, banner, call to action, conversion, contact
+ * Viewport Width: 1400
+ * Description: Full-width banner with heading, supporting line and a button.
+ *
+ * @package Lede
  */
+
 ?>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|90","bottom":"var:preset|spacing|90"},"blockGap":"var:preset|spacing|50"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-base-color has-accent-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Ready to start your project?', 'lede' ); ?></h2>
+<!-- /wp:heading -->
 
-<!-- wp:group {"align":"full","style":{"color":{"background":"var:preset|color|accent"},"spacing":{"padding":{"top":"var:preset|spacing|90","bottom":"var:preset|spacing|90"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="background-color:var(--wp--preset--color--accent);padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
+<!-- wp:paragraph {"align":"center","fontSize":"lg"} -->
+<p class="has-text-align-center has-lg-font-size"><?php esc_html_e( 'Tell us what you are working on and we will reply within one business day.', 'lede' ); ?></p>
+<!-- /wp:paragraph -->
 
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-	<div class="wp-block-group">
-
-		<!-- wp:heading {"textAlign":"center","level":2,"fontSize":"4xl","style":{"color":{"text":"var:preset|color|base"},"typography":{"lineHeight":"1.2"}}} -->
-		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-4-x-l-font-size" style="line-height:1.2">Ready to work together?</h2>
-		<!-- /wp:heading -->
-
-		<!-- wp:paragraph {"align":"center","style":{"color":{"text":"rgba(255,255,255,0.85)"},"typography":{"fontSize":"1.125rem"}}} -->
-		<p class="has-text-align-center" style="color:rgba(255,255,255,0.85);font-size:1.125rem">Let's build something great. I'm available for freelance projects and collaborations.</p>
-		<!-- /wp:paragraph -->
-
-		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-		<div class="wp-block-buttons">
-			<!-- wp:button {"style":{"color":{"background":"var:preset|color|base","text":"var:preset|color|accent"},"border":{"radius":"0.375rem"}}} -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/contact" style="border-radius:0.375rem;background-color:var(--wp--preset--color--base);color:var(--wp--preset--color--accent)">Let's Talk →</a></div>
-			<!-- /wp:button -->
-		</div>
-		<!-- /wp:buttons -->
-
-	</div>
-	<!-- /wp:group -->
-
-</div>
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"base","textColor":"contrast"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Let\'s talk', 'lede' ); ?></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:group -->

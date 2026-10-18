@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Checkmark",
+	"slug": "checkmark",
+	"blockTypes": [ "core/list" ],
+	"styles": {
+		"css": "&{list-style:none;padding-inline-start:0}& li{position:relative;padding-inline-start:1.75em}& li::before{content:\"\\2713\";position:absolute;inset-inline-start:0;color:var(--wp--preset--color--accent);font-weight:700}"
+	}
+}
