@@ -256,7 +256,6 @@ Checked on 2026-10-18 against the built ZIP:
 
 Before submitting:
 - **Name:** a theme called "First" (`first`) already exists, so "The First" risks a "too similar" rejection. A rename touches the text domain, `the_first_` prefixes, `the-first/` pattern slugs and `the-first-` CSS classes.
-- **`readme.txt` Contributors** must be your WordPress.org username (currently `dhirenpatel22`, unconfirmed).
 - Keep `Tested up to` at the current WordPress major when you submit.
 
 ## Development
