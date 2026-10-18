@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Thick",
+	"slug": "thick",
+	"blockTypes": [ "core/separator" ],
+	"styles": {
+		"css": "&{border-bottom-width:4px;border-bottom-color:currentColor;max-width:60px;margin-inline-start:0}"
+	}
+}

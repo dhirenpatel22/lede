@@ -1,73 +1,51 @@
 <?php
 /**
- * Title: About — Introduction
+ * Title: About: introduction
  * Slug: the-first/about-intro
- * Categories: the-first_content, the-first_page
- * Viewport Width: 1280
- * Description: Two-column about section with portrait photo on the left and bio text on the right.
- * Keywords: about, bio, introduction, personal, profile
+ * Categories: about
+ * Keywords: about, bio, introduction, story, profile
+ * Viewport Width: 1400
+ * Description: Image beside an about heading, two paragraphs and buttons.
+ *
+ * @package TheFirst
  */
+
 ?>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|90","bottom":"var:preset|spacing|90"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
+<!-- wp:group {"align":"wide","className":"the-first-grid-2","style":{"spacing":{"blockGap":"var:preset|spacing|80"}},"layout":{"type":"grid","columnCount":2}} -->
+<div class="wp-block-group alignwide the-first-grid-2"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:image {"aspectRatio":"4/5","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder portrait. Replace with your photo.', 'the-first' ); ?>" style="border-radius:1rem;aspect-ratio:4/5;object-fit:cover"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|90","bottom":"var:preset|spacing|90"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"textColor":"accent","fontSize":"sm","style":{"typography":{"fontWeight":"700","letterSpacing":"0.12em","textTransform":"uppercase"}}} -->
+<p class="has-accent-color has-text-color has-sm-font-size" style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'About us', 'the-first' ); ?></p>
+<!-- /wp:paragraph -->
 
-	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":"var:preset|spacing|90"}}} -->
-	<div class="wp-block-columns are-vertically-aligned-center">
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><?php esc_html_e( 'A short line about who you are', 'the-first' ); ?></h2>
+<!-- /wp:heading -->
 
-		<!-- Photo column -->
-		<!-- wp:column {"width":"45%"} -->
-		<div class="wp-block-column" style="flex-basis:45%">
-			<!-- wp:image {"aspectRatio":"4/5","scale":"cover","style":{"border":{"radius":"1rem"},"color":{"background":"var:preset|color|base-2"}}} -->
-			<figure class="wp-block-image" style="background-color:var(--wp--preset--color--base-2);border-radius:1rem"><img src="" alt="A photo of [Your Name]" style="aspect-ratio:4/5;object-fit:cover"/></figure>
-			<!-- /wp:image -->
-		</div>
-		<!-- /wp:column -->
+<!-- wp:paragraph {"textColor":"contrast-2"} -->
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Introduce yourself or your company: what you do, who you do it for, and what makes your approach different.', 'the-first' ); ?></p>
+<!-- /wp:paragraph -->
 
-		<!-- Bio column -->
-		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}}} -->
-		<div class="wp-block-column">
-			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
-			<div class="wp-block-group">
+<!-- wp:paragraph {"textColor":"contrast-2"} -->
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Add a second paragraph with a bit of history, a notable result, or the values that guide your work.', 'the-first' ); ?></p>
+<!-- /wp:paragraph -->
 
-				<!-- Eyebrow -->
-				<!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|accent"},"typography":{"fontWeight":"700","letterSpacing":"0.12em","textTransform":"uppercase","fontSize":"0.8125rem"}}} -->
-				<p style="color:var(--wp--preset--color--accent);font-size:0.8125rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">About Me</p>
-				<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Say hello', 'the-first' ); ?></a></div>
+<!-- /wp:button -->
 
-				<!-- Headline -->
-				<!-- wp:heading {"level":2,"fontSize":"4xl"} -->
-				<h2 class="wp-block-heading has-4-x-l-font-size">Hi, I'm [Your Name]</h2>
-				<!-- /wp:heading -->
-
-				<!-- Bio paragraphs -->
-				<!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|contrast-2"},"typography":{"lineHeight":"1.8"}}} -->
-				<p style="color:var(--wp--preset--color--contrast-2);line-height:1.8">I'm a [role/title] based in [City, Country]. I've been building things on the web for [X] years, with a focus on [speciality].</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|contrast-2"},"typography":{"lineHeight":"1.8"}}} -->
-				<p style="color:var(--wp--preset--color--contrast-2);line-height:1.8">Outside of work I spend time [hobby or interest]. I'm currently [project or status].</p>
-				<!-- /wp:paragraph -->
-
-				<!-- CTA -->
-				<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20"}}}} -->
-				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--20)">
-					<!-- wp:button -->
-					<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/contact">Say Hello →</a></div>
-					<!-- /wp:button -->
-					<!-- wp:button {"className":"is-style-outline"} -->
-					<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/about">More About Me</a></div>
-					<!-- /wp:button -->
-				</div>
-				<!-- /wp:buttons -->
-
-			</div>
-			<!-- /wp:group -->
-		</div>
-		<!-- /wp:column -->
-
-	</div>
-	<!-- /wp:columns -->
-
-</div>
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'Our story', 'the-first' ); ?></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
