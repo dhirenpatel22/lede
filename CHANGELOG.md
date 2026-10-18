@@ -4,6 +4,9 @@
 
 Repositioned as a lean base parent theme. **Breaking** for sites on 1.x: see "Removed".
 
+### Renamed
+- **The First → Lede** (WordPress.org already has a theme named "First"). Slug and text domain `lede`; function prefix `lede_`; filter `lede_preload_fonts`; pattern slugs `lede/…`; CSS classes `lede-grid-*`, `lede-with-sidebar`; variable `--lede--gutter`. Child themes need `Template: lede`.
+
 ### Fixed
 - Theme Unit Test edge cases: classic `<pre>`, `[caption]` and oEmbed iframes no longer overflow on phones; long unbroken titles wrap; deep comment threads stay readable at 390px; untitled posts are linked from listings via the post date.
 - Single posts now display existing comments (the template previously had only the comment form).
@@ -21,7 +24,7 @@ Repositioned as a lean base parent theme. **Breaking** for sites on 1.x: see "Re
 - WordPress.org packaging: `readme.txt` (with resource licences), official tags only, `.distignore` and `bin/build-zip.sh` (`composer zip`). Passes the Theme Check plugin.
 - **Fixed breakpoints** 600 / 768 / 1024 / 1280 (`assets/css/layout.css`) and a content + 48px + 300px sidebar layout from 1024px.
 - **Self-hosted Inter** variable font (Latin, WOFF2, OFL), preloaded, with a metric-matched fallback so the swap doesn't shift layout.
-- Breakpoint grid classes (`the-first-grid-*`) so column counts change exactly at the theme breakpoints.
+- Breakpoint grid classes (`lede-grid-*`) so column counts change exactly at the theme breakpoints.
 - Patterns: split hero, features/services grid, stats, testimonials, pricing, FAQ, team, logo cloud. Existing patterns were rebuilt.
 - **Post with Sidebar** template, which uses the previously unused sidebar part.
 - Block style variations as `theme.json` partials: Card, Highlighted, Checkmark, Shadow, Thick.

@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Post header
- * Slug: the-first/hidden-post-header
+ * Slug: lede/hidden-post-header
  * Categories: posts
  * Inserter: no
  *
- * @package TheFirst
+ * @package Lede
  */
 
 ?>

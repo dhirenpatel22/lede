@@ -1,4 +1,4 @@
-=== The First ===
+=== Lede ===
 Contributors: dhirenpatel22
 Requires at least: 6.9
 Tested up to: 7.1
@@ -10,7 +10,7 @@ A fast, accessible block theme for blogs, publishers and business sites.
 
 == Description ==
 
-The First is a lightweight block theme for full site editing. It's built for speed and readability: no theme JavaScript, one self-hosted variable font, and zero layout shift.
+Lede is a lightweight block theme for full site editing. It's built for speed and readability: no theme JavaScript, one self-hosted variable font, and zero layout shift.
 
 It includes templates for blogs and business sites, plus a post layout with a 300px sidebar. Patterns cover heroes, services, stats, testimonials, pricing, FAQ, team, logo cloud, calls to action, contact and latest posts. Layouts switch at fixed breakpoints (600, 768, 1024 and 1280px).
 
@@ -29,6 +29,7 @@ No. Those belong in plugins so they keep working if you change themes. The theme
 == Changelog ==
 
 = 2.0.0 - 2026-10-18 =
+* Renamed from "The First" to "Lede".
 * Rebuilt as a lean block theme: new patterns, templates, breakpoints and self-hosted Inter font.
 * Fixed comments display, heading sizes, block validation, contrast and full-width alignment.
 * Fixed Theme Unit Test edge cases: long words, captions, embeds, deep comment threads and untitled posts.
@@ -40,8 +41,8 @@ No. Those belong in plugins so they keep working if you change themes. The theme
 
 == Copyright ==
 
-The First WordPress Theme, Copyright 2026 Dhiren Patel.
-The First is distributed under the terms of the GNU GPL.
+Lede WordPress Theme, Copyright 2026 Dhiren Patel.
+Lede is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -53,7 +54,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-The First bundles the following third-party resources:
+Lede bundles the following third-party resources:
 
 Inter font
 Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)

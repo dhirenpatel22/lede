@@ -1,5 +1,5 @@
 /*
- * The First: breakpoints and layout.
+ * Lede: breakpoints and layout.
  *
  * Breakpoints (the same on every site):
  *   Phone          < 600
@@ -17,13 +17,13 @@
    ========================================================================== */
 
 :root {
-	--the-first--gutter: 16px;
+	--lede--gutter: 16px;
 }
 
 @media (min-width: 600px) {
 
 	:root {
-		--the-first--gutter: 24px;
+		--lede--gutter: 24px;
 	}
 }
 
@@ -61,46 +61,46 @@
    The 768–1023 band stays single-column for content, 2–3 across for cards.
 
                             <600   600–767   768–1023   >=1024
-   the-first-grid-2           1        1         1          2     (split sections)
-   the-first-grid-3           1        1         3          3
-   the-first-grid-3-wide      1        1         1          3
-   the-first-grid-2-3         1        2         2          3
-   the-first-grid-4           1        2         2          4
+   lede-grid-2           1        1         1          2     (split sections)
+   lede-grid-3           1        1         3          3
+   lede-grid-3-wide      1        1         1          3
+   lede-grid-2-3         1        2         2          3
+   lede-grid-4           1        2         2          4
    ========================================================================== */
 
-:is(.the-first-grid-2, .the-first-grid-3, .the-first-grid-3-wide, .the-first-grid-2-3, .the-first-grid-4).is-layout-grid {
+:is(.lede-grid-2, .lede-grid-3, .lede-grid-3-wide, .lede-grid-2-3, .lede-grid-4).is-layout-grid {
 	grid-template-columns: minmax(0, 1fr);
 }
 
-.the-first-grid-2.is-layout-grid {
+.lede-grid-2.is-layout-grid {
 	align-items: center;
 }
 
 @media (min-width: 600px) {
 
-	:is(.the-first-grid-2-3, .the-first-grid-4).is-layout-grid {
+	:is(.lede-grid-2-3, .lede-grid-4).is-layout-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 
 @media (min-width: 768px) {
 
-	.the-first-grid-3.is-layout-grid {
+	.lede-grid-3.is-layout-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }
 
 @media (min-width: 1024px) {
 
-	.the-first-grid-2.is-layout-grid {
+	.lede-grid-2.is-layout-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	:is(.the-first-grid-3-wide, .the-first-grid-2-3).is-layout-grid {
+	:is(.lede-grid-3-wide, .lede-grid-2-3).is-layout-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
-	.the-first-grid-4.is-layout-grid {
+	.lede-grid-4.is-layout-grid {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }
@@ -113,14 +113,14 @@
 
 @media (min-width: 1024px) {
 
-	.the-first-with-sidebar {
+	.lede-with-sidebar {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) 300px;
 		column-gap: 48px;
 		align-items: start;
 	}
 
-	.the-first-with-sidebar > * {
+	.lede-with-sidebar > * {
 		margin-block-start: 0;
 		min-width: 0; /* Grid items otherwise refuse to shrink below their content. */
 	}

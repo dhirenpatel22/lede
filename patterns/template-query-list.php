@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Posts list (template)
- * Slug: the-first/template-query-list
+ * Slug: lede/template-query-list
  * Categories: posts
  * Inserter: no
  *
- * @package TheFirst
+ * @package Lede
  */
 
 ?>
@@ -33,6 +33,6 @@
 <!-- /wp:query-pagination -->
 
 <!-- wp:query-no-results -->
-<!-- wp:pattern {"slug":"the-first/hidden-no-results"} /-->
+<!-- wp:pattern {"slug":"lede/hidden-no-results"} /-->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query -->

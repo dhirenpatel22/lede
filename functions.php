@@ -1,11 +1,11 @@
 <?php
 /**
- * The First functions and definitions.
+ * Lede functions and definitions.
  *
  * Presentation only. Security hardening, SEO and performance tuning belong
  * in plugins so they survive theme switches and don't conflict with them.
  *
- * @package TheFirst
+ * @package Lede
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,11 +13,11 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers theme supports not enabled by default for block themes.
  */
-function the_first_setup(): void {
+function lede_setup(): void {
 	add_theme_support( 'wp-block-styles' );
 	add_editor_style( array( 'style.css', 'assets/css/layout.css' ) );
 }
-add_action( 'after_setup_theme', 'the_first_setup' );
+add_action( 'after_setup_theme', 'lede_setup' );
 
 /**
  * Enqueues the parent theme stylesheets.
@@ -26,12 +26,12 @@ add_action( 'after_setup_theme', 'the_first_setup' );
  * Child themes enqueue their own stylesheet. Both files are small enough for
  * core to inline (styles_inline_size_limit), so neither blocks rendering.
  */
-function the_first_enqueue_styles(): void {
+function lede_enqueue_styles(): void {
 	$version = wp_get_theme( get_template() )->get( 'Version' );
 
 	$styles = array(
-		'the-first-style'  => 'style.css',
-		'the-first-layout' => 'assets/css/layout.css',
+		'lede-style'  => 'style.css',
+		'lede-layout' => 'assets/css/layout.css',
 	);
 
 	foreach ( $styles as $handle => $file ) {
@@ -39,7 +39,7 @@ function the_first_enqueue_styles(): void {
 		wp_style_add_data( $handle, 'path', get_parent_theme_file_path( $file ) );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'the_first_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'lede_enqueue_styles' );
 
 /**
  * Preloads the body font so text renders in it on first paint.
@@ -47,9 +47,9 @@ add_action( 'wp_enqueue_scripts', 'the_first_enqueue_styles' );
  * Child themes that change the body font should filter this list
  * (return an empty array to disable), or the preloaded file is wasted.
  */
-function the_first_preload_fonts(): void {
+function lede_preload_fonts(): void {
 	$fonts = apply_filters(
-		'the_first_preload_fonts',
+		'lede_preload_fonts',
 		array( get_parent_theme_file_uri( 'assets/fonts/inter/Inter-Variable.woff2' ) )
 	);
 
@@ -60,7 +60,7 @@ function the_first_preload_fonts(): void {
 		);
 	}
 }
-add_action( 'wp_head', 'the_first_preload_fonts', 1 );
+add_action( 'wp_head', 'lede_preload_fonts', 1 );
 
 /**
  * Makes the comment form title an h2 (core default: h3).
@@ -71,9 +71,9 @@ add_action( 'wp_head', 'the_first_preload_fonts', 1 );
  * @param array $defaults Comment form defaults.
  * @return array
  */
-function the_first_comment_form_defaults( array $defaults ): array {
+function lede_comment_form_defaults( array $defaults ): array {
 	$defaults['title_reply_before'] = '<h2 id="reply-title" class="comment-reply-title">';
 	$defaults['title_reply_after']  = '</h2>';
 	return $defaults;
 }
-add_filter( 'comment_form_defaults', 'the_first_comment_form_defaults' );
+add_filter( 'comment_form_defaults', 'lede_comment_form_defaults' );

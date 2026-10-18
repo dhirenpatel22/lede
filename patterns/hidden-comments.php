@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Comments
- * Slug: the-first/hidden-comments
+ * Slug: lede/hidden-comments
  * Categories: posts
  * Inserter: no
  *
- * @package TheFirst
+ * @package Lede
  */
 
 ?>
