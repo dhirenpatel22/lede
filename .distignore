@@ -1,0 +1,14 @@
+# Excluded from the WordPress.org ZIP (bin/build-zip.sh). Development-only files.
+.git
+.gitignore
+.distignore
+.DS_Store
+bin
+dist
+vendor
+node_modules
+composer.json
+composer.lock
+phpcs.xml.dist
+README.md
+CHANGELOG.md

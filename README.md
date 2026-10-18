@@ -1,347 +1,273 @@
-# The First
+# Lede
 
-A clean, flexible WordPress block theme built for full site editing with Gutenberg. Designed as a solid foundation for any personal website, portfolio, or blog — opinionated enough to look great out of the box, minimal enough to adapt to anything.
+A lean base **parent** block theme for full site editing (FSE) WordPress sites. Each client project runs as a child theme on top of it.
 
-**Requires:** WordPress 6.4+, PHP 8.0+
+**Requires:** WordPress 6.9+ (for the core Time to Read block), PHP 8.0+ · **Tested up to:** WordPress 7.1
 
----
+## Principles
 
-## What's Included
+- **Presentation only.** The theme handles design, templates and patterns. Security hardening, SEO meta and structured data, caching and asset tweaks belong in plugins, because theme-level code switches off when the theme changes and conflicts with those plugins. See [Recommended plugin stack](#recommended-plugin-stack).
+- **theme.json first.** Colors, type, spacing, element and block styles all live in `theme.json`, so the Site Editor's Global Styles can change any of them. `style.css` (about 3 KB) holds only what `theme.json` can't express, and `assets/css/layout.css` (about 5 KB) holds the breakpoints. Both are inlined into the page, so they don't block rendering.
+- **Core Web Vitals first.** No theme JavaScript. One self-hosted, preloaded font file. Zero layout shift. Per-block CSS loads only on pages that use the block (core behavior for block themes). See [Performance](#performance-core-web-vitals).
+- **SEO-friendly markup.** Real landmarks (`header`/`main`/`footer`/`aside`), one `h1` per template, sensible heading levels in patterns, and no meta output, so it never clashes with Yoast or Rank Math.
+- **Accessible by default.** Color pairs meet WCAG 2.2 AA contrast, focus outlines are always visible, and FAQs use native `<details>`.
+- **WPCS clean.** All PHP passes WordPress Coding Standards (`composer lint`).
+
+## Structure
 
 ```
-the-first/
-├── style.css                  Theme header + global CSS utilities
-├── theme.json                 Design system (colors, type, spacing, layout)
-├── functions.php              Theme setup, block styles, security, performance
-├── templates/
-│   ├── index.html             Fallback (used when no other template matches)
-│   ├── home.html              Blog listing page
-│   ├── single.html            Single post
-│   ├── page.html              Static page
-│   ├── page-full-width.html   Full-width page (no max-width constraint)
-│   ├── page-no-title.html     Page / post without a printed title
-│   ├── archive.html           Category, tag, date, and author archives
-│   ├── search.html            Search results
-│   └── 404.html               Error page
-├── parts/
-│   ├── header.html            Sticky site header with logo + navigation
-│   ├── footer.html            Dark footer with brand, nav, and copyright
-│   └── sidebar.html           Optional sidebar (search, recent posts, categories)
-├── patterns/
-│   ├── hero-home.php          Full-width dark hero for homepage
-│   ├── cta-banner.php         Accent-coloured call-to-action banner
-│   ├── featured-posts.php     3-column grid of latest posts
-│   ├── about-intro.php        Two-column about section with portrait
-│   └── contact-section.php    Contact details + social links
-└── assets/
-    ├── css/editor-style.css   Gutenberg editor overrides
-    └── js/navigation.js       Keyboard-accessible submenu enhancement
+lede/
+├── style.css               Theme header + rules theme.json can't express
+├── assets/css/layout.css   Breakpoints, page gutters, grids, sidebar layout
+├── theme.json              Design tokens, element and block styles
+├── functions.php           Stylesheet enqueue, editor styles, font preload,
+│                           comment-form heading level
+├── styles/blocks/          Block style variations (theme.json partials)
+├── templates/              index, home, single, single-with-sidebar, page,
+│                           page-full-width ("Wide Page"), page-no-title,
+│                           archive, search, 404
+├── parts/                  header, footer, sidebar
+├── patterns/               13 inserter patterns + hidden template patterns
+├── assets/fonts/inter/     Inter variable WOFF2 (roman + italic, Latin) + OFL licence
+├── assets/images/          SVG placeholders used by patterns (< 1 KB total)
+├── composer.json           Dev tooling (WPCS, PHPCompatibility)
+└── phpcs.xml.dist          Coding-standards ruleset
 ```
-
----
-
-## Activating the Theme
-
-1. Upload the `the-first` folder to `wp-content/themes/`.
-2. Go to **Appearance → Themes** and activate **The First**.
-3. Go to **Appearance → Editor** to start customising templates, parts, and patterns.
-
----
-
-## Design System (`theme.json`)
-
-All visual tokens live in `theme.json`. Edit this file to reskin the theme for a new project without touching any CSS.
-
-### Color Palette
-
-| Name             | Slug            | Default        | Purpose                        |
-|------------------|-----------------|----------------|--------------------------------|
-| Base             | `base`          | `#FFFFFF`      | Page background                |
-| Base Secondary   | `base-2`        | `#F7F7F5`      | Subtle section backgrounds     |
-| Contrast         | `contrast`      | `#1A1A1A`      | Body text, buttons             |
-| Contrast Secondary | `contrast-2`  | `#4A4A4A`      | Secondary text                 |
-| Primary          | `primary`       | `#1A3353`      | Hero backgrounds, links        |
-| Primary Light    | `primary-light` | `#2A4F80`      | Gradient endpoint, hover states|
-| Accent           | `accent`        | `#E05D44`      | CTA buttons, category labels   |
-| Accent Light     | `accent-light`  | `#FF8066`      | Gradient endpoint              |
-| Muted            | `muted`         | `#767676`      | Meta text, placeholders        |
-| Border           | `border`        | `#E2E2E2`      | Dividers, input borders        |
-
-**To change the palette:** edit the `settings.color.palette` array in `theme.json`. All blocks referencing `var:preset|color|primary` will update automatically.
-
-### Typography
-
-Three system font stacks ship by default:
-
-| Slug           | Stack                                            |
-|----------------|--------------------------------------------------|
-| `system-sans`  | `-apple-system, BlinkMacSystemFont, Segoe UI…`  |
-| `system-serif` | `Georgia, Times New Roman…`                      |
-| `system-mono`  | `Courier New, Courier…`                          |
-
-**To add a custom web font** (e.g. from Google Fonts):
-
-1. Add a `@font-face` block in `style.css` or enqueue the font in `functions.php`.
-2. Register the font family in `theme.json`:
-
-```json
-{
-  "fontFamily": "'Inter', var(--wp--preset--font-family--system-sans)",
-  "name": "Inter",
-  "slug": "inter"
-}
-```
-
-3. Set it as the body default:
-
-```json
-"styles": {
-  "typography": {
-    "fontFamily": "var(--wp--preset--font-family--inter)"
-  }
-}
-```
-
-### Font Sizes
-
-Ten fluid sizes from `xs` (0.75 rem) through `huge` (4 rem). Sizes `lg` through `huge` use CSS `clamp()` so they scale between mobile and desktop automatically.
-
-### Spacing Scale
-
-Ten steps from `10` (4 px / 0.25 rem) through `100` (128 px / 8 rem). Reference them in block attributes as `var:preset|spacing|60` or in CSS as `var(--wp--preset--spacing--60)`.
-
-### Layout Widths
-
-| Setting       | Default  | Change in `theme.json` `settings.layout` |
-|---------------|----------|------------------------------------------|
-| Content width | `720px`  | `contentSize`                            |
-| Wide width    | `1200px` | `wideSize`                               |
-
----
 
 ## Templates
 
-### Assigning a Custom Template to a Page
+| Template | Use |
+|---|---|
+| `home` / `index` | Blog listing: responsive grid, up to 3 columns |
+| `single` | Post: category, title, date/author/reading time, content, tags, prev/next, comments |
+| `single-with-sidebar` | **Post with Sidebar**: content + 48px gap + 300px sidebar from 1024px; the sidebar drops below the article on smaller screens |
+| `page` | Title, featured image, content |
+| `page-no-title` | **Page (No Title)**: for landing pages that start with a hero pattern |
+| `page-full-width` | **Wide Page**: regular blocks span the wide width (1200px) instead of 760px |
+| `archive`, `search` | Text-first post lists with pagination and a no-results state |
+| `404` | Message, search form, link home |
 
-In the WordPress editor, open the **Page Attributes** panel (or the **Template** option in the sidebar) and choose:
+Page and post templates (except Post with Sidebar) allow full-width (`alignfull`) blocks, and stacked full-width sections sit flush against each other.
 
-- **Full Width Page** — removes the `max-width` constraint. Good for landing pages built entirely with wide/full-width blocks.
-- **Page (No Title)** — hides the post title. Useful when the hero pattern or first content block already includes a heading.
+Template strings and links live in hidden patterns (`patterns/hidden-*.php`, `template-*.php`). That keeps them translatable and builds URLs with `home_url()`, so subdirectory installs work.
 
-### Adding a New Template
+## Patterns
 
-1. Create `templates/my-template.html` with valid block markup.
-2. Register it in `theme.json` under `customTemplates`:
+All patterns appear in the inserter under core categories (Banners, Services, Testimonials, and so on).
 
-```json
-{
-  "name": "my-template",
-  "postTypes": ["page"],
-  "title": "My Custom Template"
-}
-```
+| Pattern | Slug |
+|---|---|
+| Hero: centered (dark) | `lede/hero-home` |
+| Hero: text and image | `lede/hero-split` |
+| Features / services grid | `lede/features-grid` |
+| Stats | `lede/stats` |
+| Testimonials | `lede/testimonials` |
+| Pricing table | `lede/pricing` |
+| FAQ (accordion) | `lede/faq` |
+| Team | `lede/team` |
+| Logo cloud | `lede/logo-cloud` |
+| Call to action: banner | `lede/cta-banner` |
+| Contact | `lede/contact-section` |
+| About: introduction | `lede/about-intro` |
+| Latest posts | `lede/featured-posts` |
+| Footer | `lede/footer` (also offered when replacing the footer part) |
 
----
+Notes:
+- **Hero patterns contain the page's `h1`.** Use them with the **Page (No Title)** template, otherwise the page has two `h1`s.
+- Pattern links point to `/contact/`, `/services/`, `/about/` and `/blog/`. Create those pages or edit the links.
+- FAQ structured data comes from your SEO plugin (for example, Yoast's FAQ block), not the theme.
 
-## Template Parts
+## Block style variations
 
-Parts are reusable sections injected into templates via `<!-- wp:template-part {"slug":"header"} /-->`.
+Defined as JSON in `styles/blocks/`. They appear in the block's **Styles** panel and can be restyled in Global Styles:
 
-### Editing Parts
+| Block | Variation |
+|---|---|
+| Group, Column | Card, Highlighted |
+| List | Checkmark |
+| Image | Shadow |
+| Separator | Thick |
 
-Go to **Appearance → Editor → Template Parts**. Changes are saved to the database and override the theme file.
+Button **Outline** uses core's own variation, styled in `theme.json`.
 
-### Adding a New Part
+## Design tokens
 
-1. Create `parts/my-part.html`.
-2. Register it in `theme.json` under `templateParts`:
+| Color slug | Default | Use |
+|---|---|---|
+| `base` | `#FFFFFF` | Page background |
+| `base-2` | `#F7F7F5` | Section backgrounds |
+| `contrast` | `#1A1A1A` | Text, buttons, dark bands |
+| `contrast-2` | `#4A4A4A` | Secondary text |
+| `primary` | `#1A3353` | Links, hero background |
+| `primary-light` | `#2A4F80` | Gradient endpoint |
+| `accent` | `#C2412A` | Eyebrows, categories, CTA band (5.1:1 on white) |
+| `accent-light` | `#FF8066` | Accent text on dark backgrounds |
+| `muted` | `#6B6B6B` | Meta text (≥ 4.9:1 on `base` and `base-2`) |
+| `line` | `#E2E2E2` | Borders and dividers |
 
-```json
-{
-  "area": "uncategorized",
-  "name": "my-part",
-  "title": "My Part"
-}
-```
+Font sizes: `xs` (13px), `sm` (15px), `md` (body: 18px mobile → 20px desktop), `lg`, `xl`, `2xl` … `5xl`, `huge`, all fluid from `md` up. Body line-height is 1.6. Two families: Inter and the system monospace stack. Spacing: `10`–`100`, fluid from `60` up.
 
-3. Insert it in any template: `<!-- wp:template-part {"slug":"my-part"} /-->`
+### Gotchas when editing tokens
 
----
+1. **Digit slugs are kebab-cased in CSS variable names.** Slug `4xl` becomes `--wp--preset--font-size--4-xl` and the class `has-4-xl-font-size`. In `theme.json` *style values*, write `var:preset|font-size|4-xl`. In block *attributes*, use the slug as is: `"fontSize":"4xl"`.
+2. **Don't name a color slug `border`.** It generates `.has-border-color`, which collides with core's border-support class. That's why the divider color is called `line`.
 
-## Block Patterns
+## Fonts
 
-Patterns appear in the block inserter under the **Patterns** tab, grouped by category.
+**Inter** (variable, weights 100–900) ships in `assets/fonts/inter/` under the SIL Open Font License. It's registered in `theme.json`, so it appears in Global Styles and the editor.
 
-| Slug                          | Category          | Description                        |
-|-------------------------------|-------------------|------------------------------------|
-| `the-first/hero-home`         | Hero, Page        | Full-width dark hero               |
-| `the-first/cta-banner`        | Call to Action    | Accent banner with button          |
-| `the-first/featured-posts`    | Content           | 3-column latest posts grid         |
-| `the-first/about-intro`       | Content, Page     | Two-column bio + portrait          |
-| `the-first/contact-section`   | Content, CTA      | Contact details + social links     |
-
-### Adding a New Pattern
-
-Create `patterns/my-pattern.php` with a registration header:
-
-```php
-<?php
-/**
- * Title: My Pattern
- * Slug: the-first/my-pattern
- * Categories: the-first_content
- * Viewport Width: 1280
- * Description: A short description.
- */
-?>
-<!-- block markup here -->
-```
-
-WordPress auto-discovers all PHP files in the `patterns/` directory.
-
----
-
-## Block Styles
-
-These extra style variants are registered in `functions.php` and appear in the **Styles** panel when a block is selected:
-
-| Block         | Style Name   | Effect                              |
-|---------------|--------------|-------------------------------------|
-| `core/button` | Outline      | Transparent fill, coloured border   |
-| `core/button` | Ghost        | No fill, underline only             |
-| `core/image`  | Rounded      | 1 rem border-radius on the image    |
-| `core/image`  | Shadow       | Drop shadow                         |
-| `core/list`   | Checkmark    | Replaces bullets with ✓ marks       |
-| `core/group`  | Card         | White card with border + shadow     |
-| `core/group`  | Highlighted  | Off-white background, rounded       |
-| `core/separator` | Thick     | Bold short accent rule              |
-
----
-
-## Security Features
-
-All of the following are active by default. See `functions.php` for the implementation.
-
-| Feature                          | Details                                                   |
-|----------------------------------|-----------------------------------------------------------|
-| Generator tag removed            | WordPress version hidden from `<head>` and RSS feeds      |
-| Asset version strings stripped   | `?ver=X.X` removed from enqueued URLs                     |
-| XML-RPC disabled                 | Fully disabled via filter                                 |
-| X-Pingback header removed        | Prevents pingback amplification attacks                   |
-| Noisy head links removed         | RSD, WLW manifest, shortlink, adjacent posts links        |
-| Generic login errors             | Doesn't reveal whether a username exists                  |
-| Author enumeration blocked       | `?author=N` redirects to home for logged-out visitors     |
-| File editing disabled            | `DISALLOW_FILE_EDIT` defined (belt + suspenders)          |
-| Security response headers        | `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` |
-
-**Recommended additions in `wp-config.php`:**
+- **Latin subset only** (48 KB roman, 52 KB italic). It covers Western European languages and €. For Cyrillic, Greek or Vietnamese sites, add that subset's WOFF2 as an extra `fontFace` entry in the child theme.
+- **The italic file downloads only on pages that use italics.**
+- **The roman file is preloaded** and uses `font-display: swap`. A metric-matched fallback (`Inter Fallback`, resized Arial in `style.css`) keeps the swap from shifting layout.
+- **Changing the font in a child theme:** add the WOFF2 files and a `fontFamilies` entry to the child `theme.json`, set `styles.typography.fontFamily`, and repoint the preload:
 
 ```php
-define( 'DISALLOW_FILE_EDIT', true );
-define( 'DISALLOW_FILE_MODS', true );  // prevents plugin/theme installs too
-define( 'WP_POST_REVISIONS', 5 );
-define( 'FORCE_SSL_ADMIN', true );
+add_filter( 'lede_preload_fonts', function () {
+	return array( get_theme_file_uri( 'assets/fonts/brand/Brand-Variable.woff2' ) ); // or array() to disable.
+} );
 ```
 
-**Recommended `.htaccess` additions** (Apache):
+## Breakpoints and layout
 
-```apache
-# Block access to sensitive files
-<FilesMatch "(wp-config\.php|readme\.html|license\.txt|xmlrpc\.php)">
-    Order deny,allow
-    Deny from all
-</FilesMatch>
+Breakpoints are **600 / 768 / 1024 / 1280**, the same on every site (decided 16 Oct 2026 from a survey of 19 large news and blog sites). `theme.json` can't hold breakpoints, and CSS custom properties don't work in media queries, so the four widths live in **one file: `assets/css/layout.css`**.
 
-# Disable directory browsing
-Options -Indexes
+| Band | Viewport | Layout |
+|---|---|---|
+| Phone | < 600 | 1 column, 16px gutter, Navigation overlay menu |
+| Large phone / small tablet | 600–767 | 1 column, 24px gutter, post cards 2 across |
+| Tablet | 768–1023 | 1 column, content centred at max 760px, cards 2–3 across |
+| Laptop | 1024–1279 | Content + 48px gap + 300px sidebar (fluid, 24px gutters) |
+| Desktop | ≥ 1280 | Container at its 1200px max: content 852 + 48 + sidebar 300 |
+
+Measured in a browser (Post with Sidebar, logged out):
+
+| | 390 | 600 | 768 | 1024 | 1280 | 1440 |
+|---|---|---|---|---|---|---|
+| Gutter | 16 | 24 | 24 | 24 | 40 (centred) | 120 (centred) |
+| Content column | 358 | 552 | 720 | 628 | 852 | 852 |
+| Text measure | 358 | 552 | 720 | 628 | 760 | 760 |
+| Sidebar | below | below | below | 300 | 300 | 300 |
+| Body size | 18.1px | 18.5px | 18.9px | 19.4px | 20px | 20px |
+
+Rules the theme follows:
+- **No Columns block in templates or patterns.** Core Columns stacks below 782px, not 768, so layouts use Group blocks with grid layout instead, and the theme's breakpoints control them. Remove Columns from your writers' block list in your editorial setup; the theme doesn't restrict blocks.
+- **No sticky header.**
+- **Reserved space everywhere:** a fixed 73px header (logo capped at 40px), 16:9 featured images served at full size (Google Discover wants ≥1200px wide), and fixed aspect ratios on card images.
+- The Navigation overlay below 600px is core's breakpoint, and it matches the spec.
+
+### Grids
+
+Grids opt in with a class on the grid Group or Post Template:
+
+| Class | <600 | 600–767 | 768–1023 | ≥1024 | Used by |
+|---|---|---|---|---|---|
+| `lede-grid-2` | 1 | 1 | 1 | 2 | Split hero, about, contact |
+| `lede-grid-3` | 1 | 1 | 3 | 3 | Latest posts |
+| `lede-grid-3-wide` | 1 | 1 | 1 | 3 | Pricing, testimonials |
+| `lede-grid-2-3` | 1 | 2 | 2 | 3 | Features, blog grid |
+| `lede-grid-4` | 1 | 2 | 2 | 4 | Team, stats |
+
+Remove the class (Block settings → Advanced → Additional CSS class) to use the editor's own grid controls instead.
+
+## Performance (Core Web Vitals)
+
+Measured with Lighthouse 12 (mobile profile, simulated slow 4G, 4× CPU slowdown), median of 3 runs, logged out, WordPress 7.1.3. The test server was a local Playground running PHP in WebAssembly, so time to first byte was about 800ms. A cached production host is typically about 100ms, so real-world LCP should be lower.
+
+| Page | Performance | Accessibility | Best practices | SEO | LCP | CLS | TBT |
+|---|---|---|---|---|---|---|---|
+| Landing (hero + features) | 99 | 100 | 100 | 92* | 1.84s | 0 | 0ms |
+| Blog index | 99 | 100 | 100 | 91* | 1.84s | 0 | 0ms |
+| Single post | 98 | 100 | 100 | 92* | 2.11s | 0 | 0ms |
+| Post with Sidebar | 98 | 100** | 100 | 92* | 2.11s | 0 | 0ms |
+
+\* The only SEO deduction is the missing meta description, which is the SEO plugin's job.
+\** Measured after fixing the comment-form heading level (it was 98 before).
+
+Thresholds for "good": LCP ≤ 2.5s, CLS ≤ 0.1, INP ≤ 200ms (TBT is the lab proxy for INP).
+
+What keeps the vitals good in production:
+- **LCP:** use a page cache. The first featured or hero image automatically gets `fetchpriority="high"`, and images further down are lazy-loaded (both core behavior). Both theme stylesheets are inlined, so they don't block rendering.
+- **CLS:** upload images through the Media Library, which adds `width`/`height` attributes. The font swap is metric-matched.
+- **INP:** the theme ships no JavaScript. Watch what plugins add.
+- The emoji script (about 15 KB) is core's. Remove it with your performance plugin.
+
+## Child themes (one per client project)
+
+```
+wp-content/themes/client-name/
+├── style.css
+├── theme.json      Only the tokens you're changing; WordPress merges it over the parent
+└── functions.php   Optional
 ```
 
----
-
-## Performance Features
-
-| Feature                        | Saving                                              |
-|--------------------------------|-----------------------------------------------------|
-| Emoji scripts disabled         | ~50 KB JS + CSS removed from every page             |
-| oEmbed discovery disabled      | Removes external DNS look-up on every page load     |
-| Dashicons dequeued (guests)    | ~30 KB CSS removed for logged-out visitors          |
-| jQuery Migrate removed         | ~8 KB JS removed on front end                       |
-| Post revisions capped at 5     | Reduces database bloat                              |
-| Asset version query strings removed | Improves proxy/CDN cacheability              |
-| Navigation JS deferred         | Non-blocking script loading                         |
-
-**Additional recommendations:**
-
-- Enable a page-caching plugin (WP Super Cache, W3 Total Cache, or LiteSpeed Cache).
-- Use a CDN for static assets.
-- Enable GZIP/Brotli compression at the server level.
-- Add `loading="lazy"` attribute to images below the fold (WordPress does this automatically for images below the first viewport).
-
----
-
-## Creating a Child Theme
-
-To customise the theme without losing changes on updates:
-
-1. Create `wp-content/themes/the-first-child/` with a `style.css`:
+`style.css`:
 
 ```css
 /*
-Theme Name: The First Child
-Template:   the-first
+Theme Name: Client Name
+Template:   lede
 Version:    1.0.0
 */
 ```
 
-2. Add a `functions.php` that enqueues the parent stylesheet:
+The parent always loads its own stylesheet. If the child has CSS of its own, enqueue it from the child's `functions.php`:
 
 ```php
-<?php
 add_action( 'wp_enqueue_scripts', function () {
-    wp_enqueue_style( 'the-first-parent', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'the-first-child',  get_stylesheet_uri(), ['the-first-parent'] );
+	wp_enqueue_style( 'client-name', get_stylesheet_uri(), array( 'lede-style' ), wp_get_theme()->get( 'Version' ) );
 } );
 ```
 
-3. Copy any file you want to override (template, part, `theme.json`) into the child theme directory. WordPress loads the child version first.
+A child theme can override any template, part or pattern by adding a file with the same path.
 
----
+## Recommended plugin stack
 
-## Adapting for a New Site
+The theme deliberately leaves these out:
 
-Quick checklist when reusing the theme for a different project:
+| Need | Typical choice |
+|---|---|
+| SEO meta, sitemaps, schema, breadcrumbs | Yoast SEO or Rank Math |
+| Security hardening (XML-RPC, headers, login, user enumeration) | Wordfence / Solid Security, or a site mu-plugin |
+| Page cache, asset cleanup (emoji, embeds, dashicons) | Host cache + WP Rocket / Perfmatters / LiteSpeed Cache |
+| Forms | Gravity Forms, WPForms or Fluent Forms |
 
-- [ ] Update author info in `style.css` header
-- [ ] Set brand colors in `theme.json` → `settings.color.palette`
-- [ ] Add custom fonts if needed (see Typography section above)
-- [ ] Adjust `contentSize` / `wideSize` in `theme.json` if the design calls for different column widths
-- [ ] Edit `parts/header.html` and `parts/footer.html` in the Site Editor to set up navigation menus
-- [ ] Update placeholder text in patterns (`about-intro.php`, `contact-section.php`, `hero-home.php`)
-- [ ] Set a site logo via **Appearance → Customize → Site Identity** (or in the Site Editor)
-- [ ] Review and update the security headers in `functions.php` (CSP, frame options) to match the site's needs
+Also set these in `wp-config.php`, not the theme: `DISALLOW_FILE_EDIT`, `WP_POST_REVISIONS`, `FORCE_SSL_ADMIN`.
 
----
+## Submitting to WordPress.org
 
-## Frequently Asked Questions
+```bash
+composer zip          # builds dist/lede-<version>.zip, leaving out everything in .distignore
+```
 
-**Why no `functions.php` classic widgets or widget areas?**
-Block themes use template parts and patterns instead of classic widget areas. The sidebar template part (`parts/sidebar.html`) achieves the same result natively in the block editor.
+The ZIP holds only theme files: no `vendor/`, Composer or PHPCS files, `bin/`, dotfiles, `README.md` or `CHANGELOG.md`. WordPress.org reads `readme.txt` (description, FAQ, changelog, copyright and the licences of bundled resources).
 
-**Can I use plugins with this theme?**
-Yes. The theme is intentionally unopinionated about plugins. WooCommerce, ACF, Gravity Forms, Yoast SEO, and most other major plugins are compatible.
+Checked on 2026-10-18 against the built ZIP:
 
-**Where do I create navigation menus?**
-Go to **Appearance → Editor → Navigation** to create and assign menus to the header and footer navigation blocks.
+| Check | Result |
+|---|---|
+| Theme Check plugin (what the upload runs) | Passed all 9,275 tests; one INFO note confirming the single text domain `lede` |
+| WPCS + PHPCompatibility (PHP 8.0+, WP 6.9+) | 0 errors, 0 warnings |
+| Block validation on 6.9.10 (minimum) and 7.1.3 (tested up to) | 0 invalid blocks, no missing blocks |
+| PHP notices with `WP_DEBUG` on (all templates, logged in and out, editor and Site Editor) | None on 6.9.10 or 7.1.3 |
+| Theme Unit Test data (57 posts + pages + archives at 390px and 1280px) | No overflow and no PHP notices; untitled posts linked from listings via their dates |
+| Third-party requests at runtime | None (font self-hosted; the only external link is the footer credit) |
+| Licences | GPLv2+ theme; Inter under OFL (accepted for fonts); images and screenshot are original |
+| Tags | Only official tags from the WordPress.org feature list |
 
-**The REST API restriction is commented out — should I enable it?**
-Only if you don't need a public REST API (e.g. for headless use, mobile apps, or Gutenberg itself). Enabling it will break the block editor for logged-out previews. Leave it commented unless you have a specific reason to restrict it.
+Before submitting:
+- **Name:** "Lede" (`lede`) had no registered slug and no similar theme name in the directory on 2026-10-18. WordPress.org also blocks slugs of removed or rejected themes, which the public directory doesn't show, so the upload is the final check.
+- Keep `Tested up to` at the current WordPress major when you submit.
 
-**How do I add Google Fonts?**
-See the Typography section above. For performance, self-host the font files rather than loading them from Google's servers (use `google-webfonts-helper.herokuapp.com` to download the files).
+## Development
 
----
+```bash
+composer install     # WPCS + PHPCompatibility
+composer lint        # phpcs, must report 0 errors
+composer lint:fix    # phpcbf auto-fixes
+```
+
+Before releasing, insert every pattern in the editor and check that none shows "This block contains unexpected or invalid content". Hand-written block markup must match exactly what the block's settings would produce.
 
 ## License
 
-GNU General Public License v2 or later.
-See [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+GNU General Public License v2 or later. See `LICENSE`.

@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Shadow",
+	"slug": "shadow",
+	"blockTypes": [ "core/image" ],
+	"styles": {
+		"css": "& img{box-shadow:var(--wp--preset--shadow--xl)}"
+	}
+}

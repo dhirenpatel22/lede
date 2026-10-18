@@ -1,309 +1,132 @@
 /*
-Theme Name: The First
+Theme Name: Lede
 Theme URI: https://github.com/dhirenpatel22/the-first
 Author: Dhiren Patel
 Author URI: https://www.dhirenpatel.me/
-Description: A clean, flexible custom block theme for WordPress with full site editing support. Built for performance, security, and adaptability — a solid foundation for any personal website or portfolio.
-Requires at least: 6.4
-Tested up to: 6.7
+Description: A fast, accessible block theme for blogs, publishers and business sites. No theme JavaScript, one self-hosted variable font and zero layout shift. Includes blog and business templates, a post layout with a 300px sidebar, 13 patterns (hero, services, stats, testimonials, pricing, FAQ, team and more) and fixed breakpoints at 600, 768, 1024 and 1280px.
+Requires at least: 6.9
+Tested up to: 7.1
 Requires PHP: 8.0
-Version: 1.0.0
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: the-first
-Tags: blog, portfolio, full-site-editing, block-theme, custom-colors, custom-fonts, wide-blocks, two-columns
+Text Domain: lede
+Tags: blog, news, portfolio, one-column, right-sidebar, grid-layout, wide-blocks, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, template-editing, threaded-comments, translation-ready
 */
 
-/* ==========================================================================
-   Global resets & utilities not covered by theme.json
-   ========================================================================== */
+/*
+ * Most styling lives in theme.json. Only rules theme.json can't express go here.
+ * Breakpoints and layout live in assets/css/layout.css.
+ * :where() keeps specificity at zero so Global Styles and block settings win.
+ */
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+/*
+ * Metric-matched fallback for Inter: while the web font loads, Arial is resized
+ * to Inter's metrics so the swap doesn't shift layout (CLS).
+ */
+@font-face {
+	font-family: "Inter Fallback";
+	src: local("Arial");
+	ascent-override: 90.44%;
+	descent-override: 22.52%;
+	line-gap-override: 0%;
+	size-adjust: 107.12%;
 }
 
-html {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-	scroll-behavior: smooth;
+/* Header, main and footer sit flush; templates space themselves with padding. */
+.wp-site-blocks > * {
+	margin-block-start: 0;
 }
 
-body {
-	overflow-x: hidden;
+/* Stacked full-width sections sit flush so colored bands don't show white strips. */
+.wp-block-post-content > .alignfull + .alignfull {
+	margin-block-start: 0;
 }
 
-img,
-video,
-iframe {
-	max-width: 100%;
-	height: auto;
-}
-
-/* ==========================================================================
-   Accessibility
-   ========================================================================== */
-
-/* Skip-to-content link */
-.skip-link {
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
-.skip-link:focus {
-	clip: auto;
-	clip-path: none;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	padding: 0.75rem 1.5rem;
-	position: fixed;
-	top: 1rem;
-	left: 1rem;
-	z-index: 9999;
-	background: var(--wp--preset--color--contrast);
-	color: var(--wp--preset--color--base);
-	border-radius: 0.375rem;
-	width: auto;
-	font-weight: 600;
-	text-decoration: none;
-}
-
-:focus-visible {
-	outline: 2px solid var(--wp--preset--color--accent);
+/* Visible focus for every interactive element. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 2px solid currentColor;
 	outline-offset: 3px;
 }
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
 
-.site-header {
-	z-index: 100;
+	:where(html) {
+		scroll-behavior: smooth;
+	}
 }
 
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
-
-.wp-block-navigation a {
-	text-decoration: none;
-	transition: color 0.15s ease;
-}
-
-.wp-block-navigation .wp-block-navigation-item__content {
-	padding-block: 0.25rem;
-}
-
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-
-.wp-block-button__link {
-	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
-	will-change: transform;
-}
-
-.wp-block-button__link:hover {
-	transform: translateY(-1px);
-}
-
-.wp-block-button__link:active {
-	transform: translateY(0);
-}
-
-/* ==========================================================================
-   Post content typography
-   ========================================================================== */
-
-.wp-block-post-content p,
-.wp-block-post-content li {
-	line-height: 1.8;
-}
-
-.wp-block-post-content h2,
-.wp-block-post-content h3,
-.wp-block-post-content h4 {
+/* Long-form reading rhythm. */
+:where(.wp-block-post-content) :where(h2, h3, h4) {
 	margin-block-start: 2em;
-	margin-block-end: 0.5em;
 }
 
-.wp-block-post-content > * + * {
-	margin-block-start: 1.5em;
+/* Embedded media from classic content (oEmbed iframes carry fixed widths). */
+:where(iframe, video, embed, object) {
+	max-width: 100%;
 }
 
-/* Inline code */
-code:not(pre code) {
+/* Long unbroken words (titles, URLs, comments) wrap instead of widening the page. */
+:where(body) {
+	overflow-wrap: break-word;
+}
+
+:where(.wp-block-post-title, .wp-block-post-navigation-link, .wp-block-query-title, .wp-block-comment-content, .wp-block-comment-author-name) {
+	overflow-wrap: anywhere;
+}
+
+/* Classic-editor content: long preformatted lines scroll instead of widening the page. */
+:where(pre) {
+	overflow-x: auto;
+}
+
+/*
+ * Classic [caption] shortcodes set a fixed inline width; keep them inside their container.
+ * Must outrank core's `.is-layout-constrained > :where(...)` max-width (content size).
+ */
+.wp-caption,
+.is-layout-constrained > .wp-caption {
+	max-width: min(100%, var(--wp--style--global--content-size, 100%));
+}
+
+/* Inline code. */
+:where(code):not(pre code) {
 	font-family: var(--wp--preset--font-family--system-mono);
 	font-size: 0.875em;
 	background: var(--wp--preset--color--base-2);
 	padding: 0.125em 0.375em;
 	border-radius: 0.25rem;
-	word-break: break-word;
+	overflow-wrap: break-word;
 }
 
-/* ==========================================================================
-   Blockquote
-   ========================================================================== */
-
-.wp-block-quote cite {
-	display: block;
-	margin-block-start: 0.75rem;
-	font-size: var(--wp--preset--font-size--sm);
-	font-style: normal;
-	color: var(--wp--preset--color--muted);
-}
-
-/* ==========================================================================
-   Code blocks
-   ========================================================================== */
-
-.wp-block-code code,
-.wp-block-preformatted {
-	white-space: pre;
-	overflow-x: auto;
-	font-family: var(--wp--preset--font-family--system-mono);
-	font-size: var(--wp--preset--font-size--sm);
-}
-
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-
-.wp-block-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-.wp-block-table td,
-.wp-block-table th {
-	padding: 0.75rem 1rem;
-	border: 1px solid var(--wp--preset--color--border);
-	text-align: left;
-}
-
-.wp-block-table th {
-	background: var(--wp--preset--color--base-2);
+/* FAQ accordion (core/details). */
+:where(.wp-block-details) summary {
+	cursor: pointer;
 	font-weight: 600;
 }
 
-.wp-block-table tr:nth-child(even) td {
-	background: var(--wp--preset--color--base-2);
-}
-
-/* ==========================================================================
-   Post navigation
-   ========================================================================== */
-
-.wp-block-post-navigation-link a {
-	text-decoration: none;
-	font-weight: 600;
-	color: var(--wp--preset--color--primary);
-	transition: color 0.15s ease;
-}
-
-.wp-block-post-navigation-link a:hover {
-	color: var(--wp--preset--color--accent);
-}
-
-/* ==========================================================================
-   Pagination
-   ========================================================================== */
-
-.wp-block-query-pagination a,
-.wp-block-query-pagination-numbers .page-numbers {
-	text-decoration: none;
+/* Pagination. */
+:where(.wp-block-query-pagination) :where(a, .page-numbers) {
 	display: inline-flex;
-	align-items: center;
 	padding: 0.375rem 0.75rem;
-	border: 1px solid var(--wp--preset--color--border);
+	border: 1px solid var(--wp--preset--color--line);
 	border-radius: 0.375rem;
-	transition: all 0.15s ease;
-	font-weight: 500;
-	font-size: var(--wp--preset--font-size--sm);
+	text-decoration: none;
 	color: var(--wp--preset--color--contrast);
+	font-size: var(--wp--preset--font-size--sm);
 }
 
-.wp-block-query-pagination a:hover,
-.wp-block-query-pagination-numbers .page-numbers:hover {
+:where(.wp-block-query-pagination) :where(a:hover, .page-numbers.current) {
 	background: var(--wp--preset--color--contrast);
-	color: var(--wp--preset--color--base);
 	border-color: var(--wp--preset--color--contrast);
-}
-
-.wp-block-query-pagination-numbers .page-numbers.current {
-	background: var(--wp--preset--color--contrast);
 	color: var(--wp--preset--color--base);
-	border-color: var(--wp--preset--color--contrast);
 }
 
-/* ==========================================================================
-   Search form
-   ========================================================================== */
-
-.wp-block-search__input {
-	border: 1px solid var(--wp--preset--color--border);
-	border-radius: 0.375rem;
-	padding: 0.625rem 0.875rem;
-	transition: border-color 0.15s ease, box-shadow 0.15s ease;
-	font-size: var(--wp--preset--font-size--md);
-}
-
-.wp-block-search__input:focus {
-	outline: none;
-	border-color: var(--wp--preset--color--primary);
-	box-shadow: 0 0 0 3px rgba(26, 51, 83, 0.12);
-}
-
-.wp-block-search__button {
-	border-radius: 0.375rem;
-}
-
-/* ==========================================================================
-   Comments
-   ========================================================================== */
-
-.wp-block-post-comments-form input:not([type="submit"]),
-.wp-block-post-comments-form textarea {
-	border: 1px solid var(--wp--preset--color--border);
-	border-radius: 0.375rem;
-	padding: 0.625rem 0.875rem;
+/* Comment form fields. */
+:where(.wp-block-post-comments-form) :where(input:not([type="submit"], [type="checkbox"]), textarea) {
 	width: 100%;
-	font-size: var(--wp--preset--font-size--md);
-	font-family: inherit;
-	transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.wp-block-post-comments-form input:not([type="submit"]):focus,
-.wp-block-post-comments-form textarea:focus {
-	outline: none;
-	border-color: var(--wp--preset--color--primary);
-	box-shadow: 0 0 0 3px rgba(26, 51, 83, 0.12);
-}
-
-/* ==========================================================================
-   Responsive grid fallback for post templates
-   ========================================================================== */
-
-@media (max-width: 600px) {
-	.wp-block-post-template.is-flex-container.columns-2 > li,
-	.wp-block-post-template.is-flex-container.columns-3 > li {
-		flex-basis: 100% !important;
-		max-width: 100% !important;
-	}
-}
-
-@media (max-width: 900px) {
-	.wp-block-post-template.is-flex-container.columns-3 > li {
-		flex-basis: calc(50% - var(--wp--style--block-gap, 2rem) / 2) !important;
-	}
+	padding: 0.625rem 0.875rem;
+	border: 1px solid var(--wp--preset--color--line);
+	border-radius: 0.375rem;
+	font: inherit;
 }
