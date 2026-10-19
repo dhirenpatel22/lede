@@ -35,7 +35,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"4xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-4-xl-font-size" style="font-weight:700;line-height:1">$1,500</p>
+<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '$1,500', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"contrast-2","fontSize":"sm"} -->
@@ -73,7 +73,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"4xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-4-xl-font-size" style="font-weight:700;line-height:1">$4,500</p>
+<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '$4,500', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"contrast-2","fontSize":"sm"} -->

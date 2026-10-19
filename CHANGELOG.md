@@ -8,6 +8,7 @@ Repositioned as a lean base parent theme. **Breaking** for sites on 1.x: see "Re
 - **The First → Lede** (WordPress.org already has a theme named "First"). Slug and text domain `lede`; function prefix `lede_`; filter `lede_preload_fonts`; pattern slugs `lede/…`; CSS classes `lede-grid-*`, `lede-with-sidebar`; variable `--lede--gutter`. Child themes need `Template: lede`.
 
 ### Fixed
+- All visible pattern text is translatable, including placeholder prices, stats, team names, email and phone (WordPress.org i18n requirement).
 - Theme Unit Test edge cases: classic `<pre>`, `[caption]` and oEmbed iframes no longer overflow on phones; long unbroken titles wrap; deep comment threads stay readable at 390px; untitled posts are linked from listings via the post date.
 - Single posts now display existing comments (the template previously had only the comment form).
 - Replaced the non-existent `post-reading-time` block with `core/post-time-to-read`.
