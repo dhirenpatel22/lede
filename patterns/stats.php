@@ -16,7 +16,7 @@
 <div class="wp-block-group alignwide lede-grid-4">
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"5xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1">120+</p>
+<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '120+', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"sm"} -->
@@ -26,7 +26,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"5xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1">98%</p>
+<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '98%', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"sm"} -->
@@ -36,7 +36,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"5xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1">12</p>
+<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '12', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"sm"} -->
@@ -46,7 +46,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"5xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1">4.9/5</p>
+<p class="has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '4.9/5', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"sm"} -->
