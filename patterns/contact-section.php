@@ -38,7 +38,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><a href="mailto:hello@example.com">hello@example.com</a></p>
+<p><a href="mailto:hello@example.com"><?php esc_html_e( 'hello@example.com', 'lede' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -48,7 +48,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+<p><a href="tel:+10000000000"><?php esc_html_e( '+1 (000) 000-0000', 'lede' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

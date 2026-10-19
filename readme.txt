@@ -54,7 +54,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Lede bundles the following third-party resources:
+== Resources ==
 
 Inter font
 Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
