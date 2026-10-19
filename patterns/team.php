@@ -35,7 +35,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size">Jordan Avery</h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Jordan Avery', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
@@ -49,7 +49,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size">Casey Rivera</h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Casey Rivera', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
@@ -63,7 +63,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size">Taylor Brooks</h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Taylor Brooks', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
@@ -77,7 +77,7 @@
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size">Morgan Ellis</h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Morgan Ellis', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
