@@ -19,23 +19,23 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|70"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
 <div class="wp-block-group alignwide">
 <!-- wp:image {"width":"120px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Client logo', 'lede' ); ?>" style="width:120px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder logo', 'lede' ); ?>" style="width:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"120px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Client logo', 'lede' ); ?>" style="width:120px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder logo', 'lede' ); ?>" style="width:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"120px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Client logo', 'lede' ); ?>" style="width:120px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder logo', 'lede' ); ?>" style="width:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"120px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Client logo', 'lede' ); ?>" style="width:120px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder logo', 'lede' ); ?>" style="width:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"120px","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Client logo', 'lede' ); ?>" style="width:120px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder logo', 'lede' ); ?>" style="width:120px"/></figure>
 <!-- /wp:image -->
 
 </div>

@@ -19,11 +19,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'What clients say', 'lede' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'What people say', 'lede' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"contrast-2","fontSize":"lg"} -->
-<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Real words from real people. Replace these with quotes from your clients.', 'lede' ); ?></p>
+<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Replace these cards with quotes from your customers.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -32,24 +32,24 @@
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:quote {"className":"is-style-plain"} -->
 <blockquote class="wp-block-quote is-style-plain"><!-- wp:paragraph {"fontSize":"lg"} -->
-<p class="has-lg-font-size"><?php esc_html_e( 'They understood the brief immediately and delivered ahead of schedule. Our enquiries doubled in three months.', 'lede' ); ?></p>
-<!-- /wp:paragraph --><cite><?php esc_html_e( 'Alex Morgan, Founder, Northwind', 'lede' ); ?></cite></blockquote>
+<p class="has-lg-font-size"><?php esc_html_e( 'Add a quote here.', 'lede' ); ?></p>
+<!-- /wp:paragraph --><cite><?php esc_html_e( 'Name, role', 'lede' ); ?></cite></blockquote>
 <!-- /wp:quote --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:quote {"className":"is-style-plain"} -->
 <blockquote class="wp-block-quote is-style-plain"><!-- wp:paragraph {"fontSize":"lg"} -->
-<p class="has-lg-font-size"><?php esc_html_e( 'Clear communication, no surprises, and a site our team actually enjoys updating.', 'lede' ); ?></p>
-<!-- /wp:paragraph --><cite><?php esc_html_e( 'Priya Shah, Marketing Lead, Fieldstone', 'lede' ); ?></cite></blockquote>
+<p class="has-lg-font-size"><?php esc_html_e( 'Add a quote here.', 'lede' ); ?></p>
+<!-- /wp:paragraph --><cite><?php esc_html_e( 'Name, role', 'lede' ); ?></cite></blockquote>
 <!-- /wp:quote --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:quote {"className":"is-style-plain"} -->
 <blockquote class="wp-block-quote is-style-plain"><!-- wp:paragraph {"fontSize":"lg"} -->
-<p class="has-lg-font-size"><?php esc_html_e( 'The fastest site we have ever had. Our search traffic is up and bounce rate is down.', 'lede' ); ?></p>
-<!-- /wp:paragraph --><cite><?php esc_html_e( 'Sam Lee, Director, Harbour and Co.', 'lede' ); ?></cite></blockquote>
+<p class="has-lg-font-size"><?php esc_html_e( 'Add a quote here.', 'lede' ); ?></p>
+<!-- /wp:paragraph --><cite><?php esc_html_e( 'Name, role', 'lede' ); ?></cite></blockquote>
 <!-- /wp:quote --></div>
 <!-- /wp:group -->
 
