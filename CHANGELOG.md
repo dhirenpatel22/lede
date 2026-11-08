@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.0.1
+
+Fixes from the WordPress.org theme review.
+
+### Fixed
+- Patterns no longer carry business content: pricing, team, testimonials, contact, about, stats, FAQ, features, call to action, heroes and logo cloud use neutral placeholder text. The contact pattern no longer hardcodes `mailto:`, `tel:` or a street address.
+- Pattern buttons no longer link to `/contact/`, `/about/` or `/services/`, which don't exist on a new site. "View all posts" links to the posts page (or the home page when none is set) instead of `/blog/`.
+- The theme description no longer mentions business templates, which the theme doesn't have.
+- `load_theme_textdomain()` is called, and `languages/lede.pot` is included for the `translation-ready` tag.
+- Removed the `portfolio` and `news` subject tags (no portfolio or news-specific templates) and the `custom-colors` tag (defined by the tag rules as Customizer/theme-options color controls).
+- The blog heading on the front page sat in the 760px content column while the post grid used the 1200px wide column; the heading is now wide-aligned so both start at the same edge.
+- `screenshot.png` is a real capture of the default front page after activation.
+
 ## 2.0.0
 
 Repositioned as a lean base parent theme. **Breaking** for sites on 1.x: see "Removed".

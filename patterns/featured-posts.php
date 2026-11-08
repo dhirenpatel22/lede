@@ -10,6 +10,8 @@
  * @package Lede
  */
 
+$lede_posts_page = (int) get_option( 'page_for_posts' );
+$lede_posts_url  = $lede_posts_page ? get_permalink( $lede_posts_page ) : home_url( '/' );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|90","bottom":"var:preset|spacing|90"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
@@ -19,7 +21,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"><?php esc_html_e( 'View all posts', 'lede' ); ?></a></p>
+<p><a href="<?php echo esc_url( $lede_posts_url ); ?>"><?php esc_html_e( 'View all posts', 'lede' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

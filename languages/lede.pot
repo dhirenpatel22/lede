@@ -1,0 +1,857 @@
+# Copyright (C) 2026 Dhiren Patel
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lede 2.0.1\n"
+"Report-Msgid-Bugs-To: https://github.com/dhirenpatel22/lede/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-08T05:37:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: lede\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Lede"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/dhirenpatel22/lede"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A fast, accessible block theme for blogs, publishers and business sites. No theme JavaScript, one self-hosted variable font and zero layout shift. Includes blog templates, a post layout with a 300px sidebar, 13 patterns (hero, features, stats, testimonials, pricing, FAQ, team and more) and fixed breakpoints at 600, 768, 1024 and 1280px."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Dhiren Patel"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.dhirenpatel.me/"
+msgstr ""
+
+#: patterns/about-intro.php
+msgctxt "Pattern title"
+msgid "About: introduction"
+msgstr ""
+
+#: patterns/about-intro.php
+msgctxt "Pattern description"
+msgid "Image beside an about heading, two paragraphs and buttons."
+msgstr ""
+
+#: patterns/about-intro.php:19
+msgid "Placeholder portrait. Replace with your photo."
+msgstr ""
+
+#: patterns/about-intro.php:25
+msgid "About"
+msgstr ""
+
+#: patterns/about-intro.php:29
+msgid "A short line about who you are"
+msgstr ""
+
+#: patterns/about-intro.php:33
+msgid "Introduce yourself or your company: what you do, who you do it for, and what makes your approach different."
+msgstr ""
+
+#: patterns/about-intro.php:37
+msgid "Add a second paragraph with a bit of history, a notable result, or the values that guide your work."
+msgstr ""
+
+#: patterns/about-intro.php:42
+#: patterns/contact-section.php:19
+#: patterns/contact-section.php:28
+msgid "Contact"
+msgstr ""
+
+#: patterns/about-intro.php:46
+#: patterns/hero-home.php:33
+#: patterns/hero-split.php:32
+msgid "Learn more"
+msgstr ""
+
+#: patterns/contact-section.php
+msgctxt "Pattern title"
+msgid "Contact"
+msgstr ""
+
+#: patterns/contact-section.php
+msgctxt "Pattern description"
+msgid "Contact details beside an intro and a button."
+msgstr ""
+
+#: patterns/contact-section.php:23
+msgid "Add a short line inviting visitors to get in touch."
+msgstr ""
+
+#: patterns/contact-section.php:37
+msgid "Email"
+msgstr ""
+
+#: patterns/contact-section.php:41
+msgid "Add your email address"
+msgstr ""
+
+#: patterns/contact-section.php:47
+msgid "Phone"
+msgstr ""
+
+#: patterns/contact-section.php:51
+msgid "Add your phone number"
+msgstr ""
+
+#: patterns/contact-section.php:57
+msgid "Address"
+msgstr ""
+
+#: patterns/contact-section.php:61
+msgid "Add your address"
+msgstr ""
+
+#: patterns/cta-banner.php
+msgctxt "Pattern title"
+msgid "Call to action: banner"
+msgstr ""
+
+#: patterns/cta-banner.php
+msgctxt "Pattern description"
+msgid "Full-width banner with heading, supporting line and a button."
+msgstr ""
+
+#: patterns/cta-banner.php:16
+msgid "Add a call to action"
+msgstr ""
+
+#: patterns/cta-banner.php:20
+msgid "One short line that tells visitors what to do next."
+msgstr ""
+
+#: patterns/cta-banner.php:25
+#: patterns/hero-home.php:29
+#: patterns/hero-split.php:28
+#: patterns/pricing.php:65
+#: patterns/pricing.php:107
+#: patterns/pricing.php:145
+msgid "Get started"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Frequently asked questions as an accessible accordion."
+msgstr ""
+
+#: patterns/faq.php:18
+msgid "FAQ"
+msgstr ""
+
+#: patterns/faq.php:22
+msgid "Frequently asked questions"
+msgstr ""
+
+#: patterns/faq.php:26
+msgid "Add the questions your visitors ask most."
+msgstr ""
+
+#: patterns/faq.php:33
+msgid "Question one"
+msgstr ""
+
+#: patterns/faq.php:34
+#: patterns/faq.php:40
+#: patterns/faq.php:46
+#: patterns/faq.php:52
+msgid "Add the answer here."
+msgstr ""
+
+#: patterns/faq.php:39
+msgid "Question two"
+msgstr ""
+
+#: patterns/faq.php:45
+msgid "Question three"
+msgstr ""
+
+#: patterns/faq.php:51
+msgid "Question four"
+msgstr ""
+
+#: patterns/featured-posts.php
+msgctxt "Pattern title"
+msgid "Latest posts"
+msgstr ""
+
+#: patterns/featured-posts.php
+msgctxt "Pattern description"
+msgid "Three most recent posts in a grid with a link to the blog."
+msgstr ""
+
+#: patterns/featured-posts.php:20
+msgid "Latest writing"
+msgstr ""
+
+#: patterns/featured-posts.php:24
+msgid "View all posts"
+msgstr ""
+
+#: patterns/features-grid.php
+msgctxt "Pattern title"
+msgid "Features / services grid"
+msgstr ""
+
+#: patterns/features-grid.php
+msgctxt "Pattern description"
+msgid "Section heading with six feature or service cards in a three-column grid."
+msgstr ""
+
+#: patterns/features-grid.php:18
+msgid "Features"
+msgstr ""
+
+#: patterns/features-grid.php:22
+msgid "What you offer"
+msgstr ""
+
+#: patterns/features-grid.php:26
+msgid "Replace these cards with your own features, services or benefits."
+msgstr ""
+
+#: patterns/features-grid.php:34
+#: patterns/pricing.php:47
+#: patterns/pricing.php:85
+#: patterns/pricing.php:127
+msgid "Feature one"
+msgstr ""
+
+#: patterns/features-grid.php:38
+#: patterns/features-grid.php:48
+#: patterns/features-grid.php:58
+#: patterns/features-grid.php:68
+#: patterns/features-grid.php:78
+#: patterns/features-grid.php:88
+msgid "Describe this feature in a sentence or two."
+msgstr ""
+
+#: patterns/features-grid.php:44
+#: patterns/pricing.php:51
+#: patterns/pricing.php:89
+#: patterns/pricing.php:131
+msgid "Feature two"
+msgstr ""
+
+#: patterns/features-grid.php:54
+#: patterns/pricing.php:55
+#: patterns/pricing.php:93
+#: patterns/pricing.php:135
+msgid "Feature three"
+msgstr ""
+
+#: patterns/features-grid.php:64
+#: patterns/pricing.php:59
+#: patterns/pricing.php:97
+#: patterns/pricing.php:139
+msgid "Feature four"
+msgstr ""
+
+#: patterns/features-grid.php:74
+#: patterns/pricing.php:101
+msgid "Feature five"
+msgstr ""
+
+#: patterns/features-grid.php:84
+msgid "Feature six"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#. translators: %s: WordPress link.
+#: patterns/footer.php:32
+#, php-format
+msgid "Powered by %s"
+msgstr ""
+
+#. translators: %s: WordPress link.
+#: patterns/footer.php:32
+msgid "https://wordpress.org"
+msgstr ""
+
+#: patterns/hero-home.php
+msgctxt "Pattern title"
+msgid "Hero: centered"
+msgstr ""
+
+#: patterns/hero-home.php
+msgctxt "Pattern description"
+msgid "Full-width dark hero with eyebrow, headline, intro and two buttons."
+msgstr ""
+
+#: patterns/hero-home.php:16
+msgid "Welcome"
+msgstr ""
+
+#: patterns/hero-home.php:20
+msgid "Build something people remember."
+msgstr ""
+
+#: patterns/hero-home.php:24
+msgid "A short, specific promise: who you help, what you do for them, and why it matters."
+msgstr ""
+
+#: patterns/hero-split.php
+msgctxt "Pattern title"
+msgid "Hero: text and image"
+msgstr ""
+
+#: patterns/hero-split.php
+msgctxt "Pattern description"
+msgid "Two-column hero with headline, intro and buttons beside an image."
+msgstr ""
+
+#: patterns/hero-split.php:19
+msgid "Clear headline that states the outcome you deliver"
+msgstr ""
+
+#: patterns/hero-split.php:23
+msgid "One or two sentences that expand on the headline and give visitors a reason to keep reading."
+msgstr ""
+
+#: patterns/hero-split.php:39
+msgid "Placeholder image. Replace with your own image."
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404 content"
+msgstr ""
+
+#: patterns/hidden-404.php:14
+msgid "Error 404"
+msgstr ""
+
+#: patterns/hidden-404.php:18
+msgid "Page not found"
+msgstr ""
+
+#: patterns/hidden-404.php:22
+msgid "The page you are looking for does not exist or may have moved. Try searching, or head back home."
+msgstr ""
+
+#: patterns/hidden-404.php:29
+msgid "Back to home"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php
+msgctxt "Pattern title"
+msgid "Blog heading"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:14
+msgid "Blog"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:18
+msgid "Thoughts, notes, and ideas."
+msgstr ""
+
+#: patterns/hidden-comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr ""
+
+#: patterns/hidden-no-results.php
+msgctxt "Pattern title"
+msgid "No results"
+msgstr ""
+
+#: patterns/hidden-no-results.php:13
+msgid "Nothing matched. Try a different search."
+msgstr ""
+
+#: patterns/hidden-post-footer.php
+msgctxt "Pattern title"
+msgid "Post footer"
+msgstr ""
+
+#: patterns/hidden-post-footer.php:13
+msgid "Tagged: "
+msgstr ""
+
+#: patterns/hidden-post-header.php
+msgctxt "Pattern title"
+msgid "Post header"
+msgstr ""
+
+#: patterns/hidden-search.php
+msgctxt "Pattern title"
+msgid "Search form"
+msgstr ""
+
+#: patterns/hidden-search.php:12
+msgctxt "search form label"
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-search.php:12
+msgctxt "search input placeholder"
+msgid "Search…"
+msgstr ""
+
+#: patterns/hidden-search.php:12
+msgctxt "search button text"
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-sidebar.php
+msgctxt "Pattern title"
+msgid "Sidebar"
+msgstr ""
+
+#: patterns/hidden-sidebar.php:17
+msgid "Recent posts"
+msgstr ""
+
+#: patterns/hidden-sidebar.php:25
+msgid "Categories"
+msgstr ""
+
+#: patterns/logo-cloud.php
+msgctxt "Pattern title"
+msgid "Logo cloud"
+msgstr ""
+
+#: patterns/logo-cloud.php
+msgctxt "Pattern description"
+msgid "A row of client or partner logos."
+msgstr ""
+
+#: patterns/logo-cloud.php:16
+msgid "Trusted by teams at"
+msgstr ""
+
+#: patterns/logo-cloud.php:22
+#: patterns/logo-cloud.php:26
+#: patterns/logo-cloud.php:30
+#: patterns/logo-cloud.php:34
+#: patterns/logo-cloud.php:38
+msgid "Placeholder logo"
+msgstr ""
+
+#: patterns/pricing.php
+msgctxt "Pattern title"
+msgid "Pricing table"
+msgstr ""
+
+#: patterns/pricing.php
+msgctxt "Pattern description"
+msgid "Three pricing tiers with feature lists and buttons."
+msgstr ""
+
+#: patterns/pricing.php:18
+msgid "Pricing"
+msgstr ""
+
+#: patterns/pricing.php:22
+msgid "Plans and pricing"
+msgstr ""
+
+#: patterns/pricing.php:26
+msgid "Describe your plans here. Give each card a name, price, short summary and feature list."
+msgstr ""
+
+#: patterns/pricing.php:34
+msgid "Plan one"
+msgstr ""
+
+#: patterns/pricing.php:38
+#: patterns/pricing.php:76
+#: patterns/pricing.php:118
+msgid "Price"
+msgstr ""
+
+#: patterns/pricing.php:42
+#: patterns/pricing.php:80
+#: patterns/pricing.php:122
+msgid "A short summary of who this plan is for."
+msgstr ""
+
+#: patterns/pricing.php:72
+msgid "Plan two"
+msgstr ""
+
+#: patterns/pricing.php:114
+msgid "Plan three"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern title"
+msgid "Stats"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern description"
+msgid "Four headline numbers on a dark band."
+msgstr ""
+
+#: patterns/stats.php:19
+#: patterns/stats.php:29
+#: patterns/stats.php:39
+#: patterns/stats.php:49
+msgid "00"
+msgstr ""
+
+#: patterns/stats.php:23
+#: patterns/stats.php:33
+#: patterns/stats.php:43
+#: patterns/stats.php:53
+msgid "Label"
+msgstr ""
+
+#: patterns/team.php
+msgctxt "Pattern title"
+msgid "Team"
+msgstr ""
+
+#: patterns/team.php
+msgctxt "Pattern description"
+msgid "Four team members with portrait, name and role."
+msgstr ""
+
+#: patterns/team.php:18
+msgid "Team"
+msgstr ""
+
+#: patterns/team.php:22
+msgid "Meet the team"
+msgstr ""
+
+#: patterns/team.php:26
+msgid "Add a short introduction to your team."
+msgstr ""
+
+#: patterns/team.php:34
+#: patterns/team.php:48
+#: patterns/team.php:62
+#: patterns/team.php:76
+msgid "Placeholder portrait. Replace with a photo."
+msgstr ""
+
+#: patterns/team.php:38
+#: patterns/team.php:52
+#: patterns/team.php:66
+#: patterns/team.php:80
+msgid "Name"
+msgstr ""
+
+#: patterns/team.php:42
+#: patterns/team.php:56
+#: patterns/team.php:70
+#: patterns/team.php:84
+msgid "Role"
+msgstr ""
+
+#: patterns/template-query-grid.php
+msgctxt "Pattern title"
+msgid "Posts grid (template)"
+msgstr ""
+
+#: patterns/template-query-list.php
+msgctxt "Pattern title"
+msgid "Posts list (template)"
+msgstr ""
+
+#: patterns/testimonials.php
+msgctxt "Pattern title"
+msgid "Testimonials"
+msgstr ""
+
+#: patterns/testimonials.php
+msgctxt "Pattern description"
+msgid "Three client quotes in cards."
+msgstr ""
+
+#: patterns/testimonials.php:18
+msgid "Testimonials"
+msgstr ""
+
+#: patterns/testimonials.php:22
+msgid "What people say"
+msgstr ""
+
+#: patterns/testimonials.php:26
+msgid "Replace these cards with quotes from your customers."
+msgstr ""
+
+#: patterns/testimonials.php:35
+#: patterns/testimonials.php:43
+#: patterns/testimonials.php:51
+msgid "Add a quote here."
+msgstr ""
+
+#: patterns/testimonials.php:36
+#: patterns/testimonials.php:44
+#: patterns/testimonials.php:52
+msgid "Name, role"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary Light"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent Light"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Muted"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Line"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Primary Gradient"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Dark Gradient"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "SM"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "MD"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "LG"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "8"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "9"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "10"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Mono"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "SM"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "MD"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "LG"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "2XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "3XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "4XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "5XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Wide Page"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (No Title)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Post with Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: styles/blocks/group-card.json
+msgctxt "Style variation name"
+msgid "Card"
+msgstr ""
+
+#: styles/blocks/group-highlighted.json
+msgctxt "Style variation name"
+msgid "Highlighted"
+msgstr ""
+
+#: styles/blocks/image-shadow.json
+msgctxt "Style variation name"
+msgid "Shadow"
+msgstr ""
+
+#: styles/blocks/list-checkmark.json
+msgctxt "Style variation name"
+msgid "Checkmark"
+msgstr ""
+
+#: styles/blocks/separator-thick.json
+msgctxt "Style variation name"
+msgid "Thick"
+msgstr ""

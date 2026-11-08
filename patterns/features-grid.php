@@ -15,15 +15,15 @@
 <div class="wp-block-group alignfull has-base-2-background-color has-background" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:paragraph {"align":"center","textColor":"accent","fontSize":"sm","style":{"typography":{"fontWeight":"700","letterSpacing":"0.12em","textTransform":"uppercase"}}} -->
-<p class="has-text-align-center has-accent-color has-text-color has-sm-font-size" style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'What we do', 'lede' ); ?></p>
+<p class="has-text-align-center has-accent-color has-text-color has-sm-font-size" style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Features', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Services built around your goals', 'lede' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'What you offer', 'lede' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"contrast-2","fontSize":"lg"} -->
-<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Replace these cards with your own services, features or benefits.', 'lede' ); ?></p>
+<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Replace these cards with your own features, services or benefits.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -31,61 +31,61 @@
 <div class="wp-block-group alignwide lede-grid-2-3">
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Strategy', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Feature one', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Understand the problem before solving it. Research, goals and a plan everyone agrees on.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Describe this feature in a sentence or two.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Design', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Feature two', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Interfaces that look sharp and are easy to use on every screen size.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Describe this feature in a sentence or two.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Development', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Feature three', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Fast, accessible, secure builds on a stack that is easy to maintain.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Describe this feature in a sentence or two.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Content', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Feature four', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Words and visuals that explain what you do and why it matters.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Describe this feature in a sentence or two.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Optimization', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Feature five', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Measure, learn and improve conversion, speed and search visibility.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Describe this feature in a sentence or two.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Support', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Feature six', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Ongoing care, updates and help whenever you need it.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Describe this feature in a sentence or two.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

@@ -14,6 +14,7 @@ defined( 'ABSPATH' ) || exit;
  * Registers theme supports not enabled by default for block themes.
  */
 function lede_setup(): void {
+	load_theme_textdomain( 'lede', get_template_directory() . '/languages' );
 	add_theme_support( 'wp-block-styles' );
 	add_editor_style( array( 'style.css', 'assets/css/layout.css' ) );
 }

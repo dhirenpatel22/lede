@@ -15,15 +15,15 @@
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--90);padding-bottom:var(--wp--preset--spacing--90)">
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:paragraph {"align":"center","textColor":"accent","fontSize":"sm","style":{"typography":{"fontWeight":"700","letterSpacing":"0.12em","textTransform":"uppercase"}}} -->
-<p class="has-text-align-center has-accent-color has-text-color has-sm-font-size" style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Our team', 'lede' ); ?></p>
+<p class="has-text-align-center has-accent-color has-text-color has-sm-font-size" style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Team', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'The people behind the work', 'lede' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Meet the team', 'lede' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"contrast-2","fontSize":"lg"} -->
-<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'A small, senior team. You work directly with the people doing the work.', 'lede' ); ?></p>
+<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Add a short introduction to your team.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -31,57 +31,57 @@
 <div class="wp-block-group alignwide lede-grid-4">
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:image {"aspectRatio":"4/5","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"0.75rem"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Portrait of Jordan Avery', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder portrait. Replace with a photo.', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Jordan Avery', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Name', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
-<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Founder and Strategy', 'lede' ); ?></p>
+<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Role', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:image {"aspectRatio":"4/5","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"0.75rem"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Portrait of Casey Rivera', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder portrait. Replace with a photo.', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Casey Rivera', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Name', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
-<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Design Lead', 'lede' ); ?></p>
+<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Role', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:image {"aspectRatio":"4/5","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"0.75rem"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Portrait of Taylor Brooks', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder portrait. Replace with a photo.', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Taylor Brooks', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Name', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
-<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Lead Developer', 'lede' ); ?></p>
+<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Role', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:image {"aspectRatio":"4/5","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"0.75rem"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Portrait of Morgan Ellis', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/placeholder-portrait.svg' ) ); ?>" alt="<?php esc_attr_e( 'Placeholder portrait. Replace with a photo.', 'lede' ); ?>" style="border-radius:0.75rem;aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"lg"} -->
-<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Morgan Ellis', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-lg-font-size"><?php esc_html_e( 'Name', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted","fontSize":"sm"} -->
-<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Project Manager', 'lede' ); ?></p>
+<p class="has-muted-color has-text-color has-sm-font-size"><?php esc_html_e( 'Role', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
