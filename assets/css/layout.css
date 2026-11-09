@@ -40,6 +40,15 @@
 	width: auto;
 }
 
+/* A long menu wraps instead of squeezing the logo and title. Phones keep
+   shrinking so a long title wraps rather than widening the page. */
+@media (min-width: 600px) {
+
+	.site-header > .alignwide > .wp-block-group:first-child {
+		flex-shrink: 0;
+	}
+}
+
 /* ==========================================================================
    Threaded comments: a small indent on phones so deep threads stay readable.
    ========================================================================== */
