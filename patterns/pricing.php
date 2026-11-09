@@ -19,11 +19,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Simple, transparent pricing', 'lede' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Plans and pricing', 'lede' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"contrast-2","fontSize":"lg"} -->
-<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Pick the package that fits. Every plan includes hosting setup and launch support.', 'lede' ); ?></p>
+<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Describe your plans here. Give each card a name, price, short summary and feature list.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -31,118 +31,118 @@
 <div class="wp-block-group alignwide lede-grid-3-wide">
 <!-- wp:group {"className":"is-style-card","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Starter', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Plan one', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"4xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '$1,500', 'lede' ); ?></p>
+<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( 'Price', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"contrast-2","fontSize":"sm"} -->
-<p class="has-contrast-2-color has-text-color has-sm-font-size"><?php esc_html_e( 'For small sites that need to look professional fast.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color has-sm-font-size"><?php esc_html_e( 'A short summary of who this plan is for.', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"is-style-checkmark","fontSize":"sm"} -->
 <ul class="wp-block-list is-style-checkmark has-sm-font-size"><!-- wp:list-item -->
-<li><?php esc_html_e( 'Up to 5 pages', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature one', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Mobile-first design', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature two', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Basic SEO setup', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature three', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( '2 weeks support', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature four', 'lede' ); ?></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:buttons {"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"width":100,"className":"is-style-outline"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Get started', 'lede' ); ?></a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Get started', 'lede' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Business', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Plan two', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"4xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( '$4,500', 'lede' ); ?></p>
+<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( 'Price', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"contrast-2","fontSize":"sm"} -->
-<p class="has-contrast-2-color has-text-color has-sm-font-size"><?php esc_html_e( 'Our most popular package for growing businesses.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color has-sm-font-size"><?php esc_html_e( 'A short summary of who this plan is for.', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"is-style-checkmark","fontSize":"sm"} -->
 <ul class="wp-block-list is-style-checkmark has-sm-font-size"><!-- wp:list-item -->
-<li><?php esc_html_e( 'Up to 15 pages', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature one', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Custom design system', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature two', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Blog and lead forms', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature three', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Performance tuning', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature four', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( '3 months support', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature five', 'lede' ); ?></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:buttons {"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"width":100} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Get started', 'lede' ); ?></a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Get started', 'lede' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"is-style-card","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group is-style-card"><!-- wp:heading {"level":3,"fontSize":"xl"} -->
-<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Custom', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-xl-font-size"><?php esc_html_e( 'Plan three', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"4xl","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( 'Let\'s talk', 'lede' ); ?></p>
+<p class="has-4-xl-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( 'Price', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"contrast-2","fontSize":"sm"} -->
-<p class="has-contrast-2-color has-text-color has-sm-font-size"><?php esc_html_e( 'Larger builds, integrations or ongoing retainers.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color has-sm-font-size"><?php esc_html_e( 'A short summary of who this plan is for.', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"is-style-checkmark","fontSize":"sm"} -->
 <ul class="wp-block-list is-style-checkmark has-sm-font-size"><!-- wp:list-item -->
-<li><?php esc_html_e( 'Unlimited pages', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature one', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Integrations and APIs', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature two', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Dedicated project lead', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature three', 'lede' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php esc_html_e( 'Priority support', 'lede' ); ?></li>
+<li><?php esc_html_e( 'Feature four', 'lede' ); ?></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:buttons {"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"width":100,"className":"is-style-outline"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Get started', 'lede' ); ?></a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Get started', 'lede' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
