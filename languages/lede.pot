@@ -21,7 +21,7 @@ msgstr ""
 
 #. Theme URI of the theme
 #: style.css
-msgid "https://github.com/dhirenpatel22/lede"
+msgid "https://wordpress.org/themes/lede/"
 msgstr ""
 
 #. Description of the theme
