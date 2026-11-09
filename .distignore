@@ -12,3 +12,4 @@ composer.lock
 phpcs.xml.dist
 README.md
 CHANGELOG.md
+CLAUDE.md

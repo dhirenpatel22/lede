@@ -12,7 +12,7 @@ A fast, accessible block theme for blogs, publishers and business sites.
 
 Lede is a lightweight block theme for full site editing. It's built for speed and readability: no theme JavaScript, one self-hosted variable font, and zero layout shift.
 
-It includes templates for blogs and business sites, plus a post layout with a 300px sidebar. Patterns cover heroes, services, stats, testimonials, pricing, FAQ, team, logo cloud, calls to action, contact and latest posts. Layouts switch at fixed breakpoints (600, 768, 1024 and 1280px).
+It includes blog templates, plus a post layout with a 300px sidebar. Patterns cover heroes, features, stats, testimonials, pricing, FAQ, team, logo cloud, calls to action, contact and latest posts. Layouts switch at fixed breakpoints (600, 768, 1024 and 1280px).
 
 Colors meet WCAG 2.2 AA contrast, focus outlines are always visible, and every string is translatable.
 
@@ -27,6 +27,14 @@ Edit a post and choose the "Post with Sidebar" template. To make it the default,
 No. Those belong in plugins so they keep working if you change themes. The theme outputs clean, semantic markup that works with any SEO plugin.
 
 == Changelog ==
+
+= 2.0.1 - 2026-11-08 =
+* Replaced business content in the patterns with neutral placeholder text. Removed the hardcoded email, phone and address.
+* Pattern buttons no longer link to pages that may not exist (/contact/, /about/, /services/); the latest posts pattern links to the posts page.
+* Loads the text domain and ships languages/lede.pot.
+* Removed the portfolio, news and custom-colors tags.
+* The blog heading on the front page now lines up with the post grid.
+* New screenshot captured from the theme as activated.
 
 = 2.0.0 - 2026-10-18 =
 * Renamed from "The First" to "Lede".
@@ -67,5 +75,5 @@ Copyright 2026 Dhiren Patel. Created for this theme.
 License: GPLv2 or later, https://www.gnu.org/licenses/gpl-2.0.html
 
 Screenshot (screenshot.png)
-Copyright 2026 Dhiren Patel. Captured from the theme's own patterns; contains no third-party images.
+Copyright 2026 Dhiren Patel. Captured from the theme's default front page; contains no third-party images.
 License: GPLv2 or later, https://www.gnu.org/licenses/gpl-2.0.html
