@@ -74,7 +74,7 @@ All patterns appear in the inserter under core categories (Banners, Services, Te
 
 Notes:
 - **Hero patterns contain the page's `h1`.** Use them with the **Page (No Title)** template, otherwise the page has two `h1`s.
-- Pattern links point to `/contact/`, `/services/`, `/about/` and `/blog/`. Create those pages or edit the links.
+- Pattern buttons link to `#`. Point each one at the right page after inserting the pattern. "View all posts" in Latest posts links to the posts page (or the home page when none is set).
 - FAQ structured data comes from your SEO plugin (for example, Yoast's FAQ block), not the theme.
 
 ## Block style variations

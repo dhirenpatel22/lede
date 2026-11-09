@@ -8,6 +8,7 @@
 
 ### Changed
 - Theme URI points to the WordPress.org theme page.
+- README: pattern notes now say buttons link to `#` (the /contact/, /services/ and /about/ links were removed in 2.0.1).
 
 ## 2.0.1
 
