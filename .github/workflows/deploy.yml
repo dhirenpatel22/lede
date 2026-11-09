@@ -1,0 +1,51 @@
+name: Deploy to WordPress.org
+
+# Pushing a version tag (e.g. 2.0.2) commits a new folder lede/2.0.2/ to the
+# theme SVN repository. Themes have no trunk or assets folder, and a committed
+# version cannot be changed: every change, including readme fixes, needs a new version.
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  release:
+    name: Release to WordPress.org
+    runs-on: ubuntu-latest
+    env:
+      SLUG: lede
+      VERSION: ${{ github.ref_name }}
+      SVN_URL: https://themes.svn.wordpress.org/lede
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check tag matches style.css Version
+        run: |
+          style_version=$(sed -n 's/^Version: *//p' style.css | tr -d '\r')
+          if [ "$style_version" != "$VERSION" ]; then
+            echo "::error::Tag $VERSION does not match style.css Version $style_version"
+            exit 1
+          fi
+
+      - name: Check version is not already on SVN
+        run: |
+          if svn ls "$SVN_URL/$VERSION" > /dev/null 2>&1; then
+            echo "::error::$SLUG $VERSION already exists on WordPress.org SVN"
+            exit 1
+          fi
+
+      - name: Commit new version to SVN
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          svn checkout --depth empty "$SVN_URL" svn-repo
+          mkdir "svn-repo/$VERSION"
+          rsync -a --exclude-from=.distignore --exclude=svn-repo ./ "svn-repo/$VERSION/"
+          cd svn-repo
+          svn add "$VERSION"
+          svn commit -m "Release $VERSION" \
+            --non-interactive --no-auth-cache \
+            --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
