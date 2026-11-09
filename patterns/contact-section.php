@@ -16,16 +16,16 @@
 <!-- wp:group {"align":"wide","className":"lede-grid-2","style":{"spacing":{"blockGap":"var:preset|spacing|80"}},"layout":{"type":"grid","columnCount":2}} -->
 <div class="wp-block-group alignwide lede-grid-2"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:heading -->
-<h2 class="wp-block-heading"><?php esc_html_e( 'Let\'s talk', 'lede' ); ?></h2>
+<h2 class="wp-block-heading"><?php esc_html_e( 'Contact', 'lede' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"contrast-2","fontSize":"lg"} -->
-<p class="has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Have a project in mind or a question? Send a message and we will get back to you within one business day.', 'lede' ); ?></p>
+<p class="has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Add a short line inviting visitors to get in touch.', 'lede' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="mailto:hello@example.com"><?php esc_html_e( 'Email us', 'lede' ); ?></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Contact', 'lede' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -38,7 +38,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><a href="mailto:hello@example.com"><?php esc_html_e( 'hello@example.com', 'lede' ); ?></a></p>
+<p><?php esc_html_e( 'Add your email address', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -48,17 +48,17 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><a href="tel:+10000000000"><?php esc_html_e( '+1 (000) 000-0000', 'lede' ); ?></a></p>
+<p><?php esc_html_e( 'Add your phone number', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"md"} -->
-<h3 class="wp-block-heading has-md-font-size"><?php esc_html_e( 'Office', 'lede' ); ?></h3>
+<h3 class="wp-block-heading has-md-font-size"><?php esc_html_e( 'Address', 'lede' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><?php esc_html_e( '123 Example Street, City, Country', 'lede' ); ?></p>
+<p><?php esc_html_e( 'Add your address', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

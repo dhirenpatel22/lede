@@ -23,33 +23,33 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"contrast-2","fontSize":"lg"} -->
-<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Answers to the questions we hear most. Still unsure? Get in touch.', 'lede' ); ?></p>
+<p class="has-text-align-center has-contrast-2-color has-text-color has-lg-font-size"><?php esc_html_e( 'Add the questions your visitors ask most.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 <!-- wp:details -->
-<details class="wp-block-details"><summary><?php esc_html_e( 'How long does a typical project take?', 'lede' ); ?></summary><!-- wp:paragraph -->
-<p><?php esc_html_e( 'Most websites launch in four to eight weeks, depending on scope and how quickly content is ready.', 'lede' ); ?></p>
+<details class="wp-block-details"><summary><?php esc_html_e( 'Question one', 'lede' ); ?></summary><!-- wp:paragraph -->
+<p><?php esc_html_e( 'Add the answer here.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
 <!-- wp:details -->
-<details class="wp-block-details"><summary><?php esc_html_e( 'Do you offer ongoing support?', 'lede' ); ?></summary><!-- wp:paragraph -->
-<p><?php esc_html_e( 'Yes. Every project includes launch support, and we offer monthly care plans for updates, backups and improvements.', 'lede' ); ?></p>
+<details class="wp-block-details"><summary><?php esc_html_e( 'Question two', 'lede' ); ?></summary><!-- wp:paragraph -->
+<p><?php esc_html_e( 'Add the answer here.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
 <!-- wp:details -->
-<details class="wp-block-details"><summary><?php esc_html_e( 'Can I update the website myself?', 'lede' ); ?></summary><!-- wp:paragraph -->
-<p><?php esc_html_e( 'Absolutely. Sites are built with the WordPress block editor, so you can edit pages without touching code.', 'lede' ); ?></p>
+<details class="wp-block-details"><summary><?php esc_html_e( 'Question three', 'lede' ); ?></summary><!-- wp:paragraph -->
+<p><?php esc_html_e( 'Add the answer here.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
 <!-- wp:details -->
-<details class="wp-block-details"><summary><?php esc_html_e( 'What do you need from me to get started?', 'lede' ); ?></summary><!-- wp:paragraph -->
-<p><?php esc_html_e( 'A short brief, your brand assets and access to any existing accounts. We guide you through the rest.', 'lede' ); ?></p>
+<details class="wp-block-details"><summary><?php esc_html_e( 'Question four', 'lede' ); ?></summary><!-- wp:paragraph -->
+<p><?php esc_html_e( 'Add the answer here.', 'lede' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"level":1} -->
+<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|20","margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"level":1} -->
 <h1 class="wp-block-heading"><?php esc_html_e( 'Blog', 'lede' ); ?></h1>
 <!-- /wp:heading -->
 
