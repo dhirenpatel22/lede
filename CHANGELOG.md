@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.2 - 2026-11-19
+
+### Fixed
+- The header menu wraps onto more lines instead of widening the page when it has many items.
+- The site title no longer wraps onto two lines when the header menu is long (600px and up).
+
+### Changed
+- Theme URI points to the WordPress.org theme page.
+- README: pattern notes now say buttons link to `#` (the /contact/, /services/ and /about/ links were removed in 2.0.1).
+
 ## 2.0.1
 
 Fixes from the WordPress.org theme review.
