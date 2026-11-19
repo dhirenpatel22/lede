@@ -2,7 +2,7 @@
 
 A lean base **parent** block theme for full site editing (FSE) WordPress sites. Each client project runs as a child theme on top of it.
 
-**Requires:** WordPress 6.9+ (for the core Time to Read block), PHP 8.0+ · **Tested up to:** WordPress 7.1
+**Requires:** WordPress 7.0+ (for the core Breadcrumbs block), PHP 8.0+ · **Tested up to:** WordPress 7.1
 
 ## Principles
 
@@ -242,16 +242,16 @@ composer zip          # builds dist/lede-<version>.zip, leaving out everything i
 
 The ZIP holds only theme files: no `vendor/`, Composer or PHPCS files, `bin/`, dotfiles, `README.md` or `CHANGELOG.md`. WordPress.org reads `readme.txt` (description, FAQ, changelog, copyright and the licences of bundled resources).
 
-Checked on 2026-10-18 against the built ZIP:
+Checked on 2026-10-18 against the built ZIP; rows marked † re-checked on 2026-11-19 (Unreleased, WordPress 7.0.9 and 7.1.4):
 
 | Check | Result |
 |---|---|
-| Theme Check plugin (what the upload runs) | Passed all 9,275 tests; one INFO note confirming the single text domain `lede` |
-| WPCS + PHPCompatibility (PHP 8.0+, WP 6.9+) | 0 errors, 0 warnings |
-| Block validation on 6.9.10 (minimum) and 7.1.3 (tested up to) | 0 invalid blocks, no missing blocks |
+| Theme Check plugin (what the upload runs) † | No errors; one INFO note confirming the single text domain `lede` |
+| WPCS + PHPCompatibility (PHP 8.0+, WP 7.0+) † | 0 errors, 0 warnings |
+| Block validation on 7.0.9 (minimum) and 7.1.4 (tested up to) † | 0 invalid blocks, no missing blocks (39 patterns, templates and parts) |
 | PHP notices with `WP_DEBUG` on (all templates, logged in and out, editor and Site Editor) | None on 6.9.10 or 7.1.3 |
 | Theme Unit Test data (57 posts + pages + archives at 390px and 1280px) | No overflow and no PHP notices; untitled posts linked from listings via their dates |
-| Third-party requests at runtime | None (font self-hosted; the only external link is the footer credit) |
+| Third-party requests at runtime † | Font self-hosted. Avatars (author box, author archive, comments) load from Gravatar, as core does; turn off **Settings → Discussion → Show Avatars** to remove them |
 | Licences | GPLv2+ theme; Inter under OFL (accepted for fonts); images and screenshot are original |
 | Tags | Only official tags from the WordPress.org feature list |
 
