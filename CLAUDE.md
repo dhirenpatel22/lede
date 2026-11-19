@@ -3,22 +3,26 @@
 Block theme for WordPress.org. Repo: `dhirenpatel22/lede`. Local folder: `~/Developer/Github/exivon-tech/the-first`.
 Slug, text domain and folder are `lede`. The function prefix is `lede_`.
 
-## Current status (2026-11-08)
+## Current status (2026-11-19)
 
-- **2.0.0** was submitted to WordPress.org and closed as "not approved" (review feedback below).
-- **2.0.1** has every fix in it and is committed on branch `fix/wporg-review-2.0.1` (commit `9d39818`).
-  - **Not pushed yet.** The `dhirenci` account got a 403 on `dhirenpatel22/lede`. Push from the `dhirenpatel22` account:
-    `git push -u origin fix/wporg-review-2.0.1`
-  - After pushing, merge into `develop` (or open a PR).
-- The upload zip is built at `dist/lede-2.0.1.zip`. Rebuild it with `bin/build-zip.sh` (`dist/` is gitignored).
+- **Live on WordPress.org:** https://wordpress.org/themes/lede/ (approved on ticket #299422). SVN holds `2.0.0/` and `2.0.1/`.
+- **2.0.2** is merged to `main` and tagged, but not on SVN yet. The tag-triggered deploy (`.github/workflows/deploy.yml`)
+  fails at `svn commit` with `E175013: Access to '/!svn/me' forbidden` (HTTP 403: the server refuses the write,
+  which points at commit permission rather than a wrong password). Dhiren is resolving SVN access.
+- Branch flow: feature branches off `develop` → PR into `develop` → release PR `develop` → `main` → push tag `X.Y.Z`.
+- `.github/workflows/lint.yml` runs on every PR: phpcs, JSON validity, style.css/readme.txt header match,
+  and a changelog entry for the current version.
 
-## Next steps
+## Roadmap (Dhiren, 2026-11-19)
 
-1. Push the branch, then merge it.
-2. Upload `dist/lede-2.0.1.zip` at https://wordpress.org/themes/upload/. That creates a new ticket at the end of the queue.
-3. Add this note on the new ticket:
-   > The tags list cited post-formats, sticky-post, style-variations, featured-image-header, flexible-header,
-   > front-page-post-form and microformats, which were not in style.css. Removed tags: portfolio, news, custom-colors.
+Goal: the base block theme for blogs that WordPress developers use as the parent of every site.
+
+1. Release fix, CI lint, and a Lighthouse/axe baseline on the Theme Unit Test data.
+2. Blog completeness (2.1.0): author template, author bio box after posts, breadcrumbs/related posts only if core supports them.
+3. Developer experience: `lede-child` starter, docs for design tokens and overrides, 2–3 style variations.
+
+SEO, security and performance *features* (schema, head cleanup, headers, tuning switches) are plugin territory.
+They go into a separate companion plugin, never into this theme.
 
 ## Review feedback for 2.0.0, and how 2.0.1 resolves it
 
@@ -72,5 +76,5 @@ Other 2.0.1 changes:
 ## Conventions
 
 - Update `readme.txt` (Changelog) and `CHANGELOG.md` with every change, and bump `Version` in `style.css`.
-- Commit identity is `Dhiren <dhiren@conservativeinstitute.org>`. Commit only when asked.
+- Commit identity is the logged-in user, `Dhiren <dhirenpatel22@gmail.com>`. No Claude co-author or session lines in commits or PRs. Commit only when asked.
 - Keep this file out of the zip; it is listed in `.distignore`.
