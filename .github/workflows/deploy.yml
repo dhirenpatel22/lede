@@ -21,6 +21,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # ubuntu-latest runners no longer ship Subversion.
+      - name: Install Subversion
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq subversion
+          svn --version --quiet
+
       - name: Check tag matches style.css Version
         run: |
           style_version=$(sed -n 's/^Version: *//p' style.css | tr -d '\r')
