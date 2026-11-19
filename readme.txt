@@ -31,7 +31,7 @@ No. Those belong in plugins so they keep working if you change themes. The theme
 = 2.0.2 - 2026-11-19 =
 * The header menu wraps onto more lines instead of widening the page when it has many items.
 * The site title no longer wraps onto two lines when the header menu is long (600px and up).
-* Theme URI points to the WordPress.org theme page.
+* Theme URI points to the theme's home page on dhirenpatel.me.
 
 = 2.0.1 - 2026-11-08 =
 * Replaced business content in the patterns with neutral placeholder text. Removed the hardcoded email, phone and address.

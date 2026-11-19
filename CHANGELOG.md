@@ -7,7 +7,7 @@
 - The site title no longer wraps onto two lines when the header menu is long (600px and up).
 
 ### Changed
-- Theme URI points to the WordPress.org theme page.
+- Theme URI points to the theme's home page on dhirenpatel.me (WordPress.org URIs are reserved for bundled themes).
 - README: pattern notes now say buttons link to `#` (the /contact/, /services/ and /about/ links were removed in 2.0.1).
 
 ## 2.0.1
