@@ -12,6 +12,10 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|60","margin":{"top":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70)"><!-- wp:post-terms {"term":"post_tag","separator":"  ","prefix":"<?php echo esc_attr__( 'Tagged: ', 'lede' ); ?>"} /-->
 
+<!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
+<div class="wp-block-group is-style-card"><!-- wp:post-author {"avatarSize":64,"showBio":true,"byline":"<?php echo esc_attr__( 'Written by', 'lede' ); ?>","isLink":true} /--></div>
+<!-- /wp:group -->
+
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->

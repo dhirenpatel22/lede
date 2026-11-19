@@ -4,7 +4,7 @@ Theme URI: https://www.dhirenpatel.me/lede-wordpress-theme/
 Author: Dhiren Patel
 Author URI: https://www.dhirenpatel.me/
 Description: A fast, accessible block theme for blogs, publishers and business sites. No theme JavaScript, one self-hosted variable font and zero layout shift. Includes blog templates, a post layout with a 300px sidebar, 13 patterns (hero, features, stats, testimonials, pricing, FAQ, team and more) and fixed breakpoints at 600, 768, 1024 and 1280px.
-Requires at least: 6.9
+Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
 Version: 2.0.2
@@ -129,4 +129,18 @@ Tags: blog, one-column, right-sidebar, grid-layout, wide-blocks, block-patterns,
 	border: 1px solid var(--wp--preset--color--line);
 	border-radius: 0.375rem;
 	font: inherit;
+}
+
+/*
+ * Author box after posts (core/post-author). Core sets the byline to 0.5em;
+ * this must outrank core's single-class rule. Round avatar to match the
+ * author archive.
+ */
+.wp-block-post-author .wp-block-post-author__byline {
+	font-size: var(--wp--preset--font-size--xs);
+	color: var(--wp--preset--color--muted);
+}
+
+:where(.wp-block-post-author__avatar) img {
+	border-radius: 50%;
 }
