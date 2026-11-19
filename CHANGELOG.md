@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.0.2 - 2026-11-19
 
 ### Fixed
 - The header menu wraps onto more lines instead of widening the page when it has many items.
