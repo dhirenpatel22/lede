@@ -1,0 +1,16 @@
+/*
+Theme Name: Lede Child
+Template: lede
+Description: Child theme of Lede.
+Version: 1.0.0
+Requires at least: 7.0
+Requires PHP: 8.0
+Text Domain: lede-child
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+ * Only CSS that theme.json can't express goes here. Most changes belong in theme.json.
+ * Breakpoints: 600, 768, 1024, 1280px (see the parent's assets/css/layout.css).
+ */

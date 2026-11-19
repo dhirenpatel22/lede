@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-19T17:16:20+00:00\n"
+"POT-Creation-Date: 2026-11-19T17:35:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: lede\n"
@@ -621,51 +621,81 @@ msgid "Name, role"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Base"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Base Secondary"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Contrast"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Contrast Secondary"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Primary Light"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Accent"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Accent Light"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Muted"
 msgstr ""
 
 #: theme.json
+#: styles/colors/forest.json
+#: styles/colors/plum.json
+#: styles/dark.json
 msgctxt "Color name"
 msgid "Line"
 msgstr ""
@@ -751,11 +781,13 @@ msgid "10"
 msgstr ""
 
 #: theme.json
+#: styles/typography/editorial.json
 msgctxt "Font family name"
 msgid "Inter"
 msgstr ""
 
 #: theme.json
+#: styles/typography/editorial.json
 msgctxt "Font family name"
 msgid "System Mono"
 msgstr ""
@@ -863,4 +895,29 @@ msgstr ""
 #: styles/blocks/separator-thick.json
 msgctxt "Style variation name"
 msgid "Thick"
+msgstr ""
+
+#: styles/colors/forest.json
+msgctxt "Style variation name"
+msgid "Forest"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Style variation name"
+msgid "Plum"
+msgstr ""
+
+#: styles/dark.json
+msgctxt "Style variation name"
+msgid "Dark"
+msgstr ""
+
+#: styles/typography/editorial.json
+msgctxt "Style variation name"
+msgid "Editorial"
+msgstr ""
+
+#: styles/typography/editorial.json
+msgctxt "Font family name"
+msgid "Source Serif 4"
 msgstr ""

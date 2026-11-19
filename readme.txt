@@ -14,6 +14,8 @@ Lede is a lightweight block theme for full site editing. It's built for speed an
 
 It includes blog templates, plus a post layout with a 300px sidebar. Patterns cover heroes, features, stats, testimonials, pricing, FAQ, team, logo cloud, calls to action, contact and latest posts. Layouts switch at fixed breakpoints (600, 768, 1024 and 1280px).
 
+Style variations: Dark, Editorial (Source Serif 4 headings) and two color palettes, Forest and Plum. Every palette is checked against the color pairs the patterns use.
+
 Colors meet WCAG 2.2 AA contrast, focus outlines are always visible, and every string is translatable.
 
 == Frequently Asked Questions ==
@@ -74,6 +76,12 @@ Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
 License: SIL Open Font License, Version 1.1, https://openfontlicense.org
 Source: https://github.com/rsms/inter
 Files: assets/fonts/inter/Inter-Variable.woff2, assets/fonts/inter/Inter-Variable-Italic.woff2
+
+Source Serif 4 font (Editorial style variation)
+Copyright 2014-2023 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+License: SIL Open Font License, Version 1.1, https://openfontlicense.org
+Source: https://github.com/adobe-fonts/source-serif
+Files: assets/fonts/source-serif-4/SourceSerif4-Variable.woff2
 
 Placeholder images (assets/images/placeholder-landscape.svg, placeholder-portrait.svg, placeholder-logo.svg)
 Copyright 2026 Dhiren Patel. Created for this theme.

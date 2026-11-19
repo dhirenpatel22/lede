@@ -11,7 +11,7 @@ Version: 2.0.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lede
-Tags: blog, one-column, right-sidebar, grid-layout, wide-blocks, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, template-editing, threaded-comments, translation-ready
+Tags: blog, one-column, right-sidebar, grid-layout, wide-blocks, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, style-variations, full-width-template, template-editing, threaded-comments, translation-ready
 */
 
 /*
@@ -31,6 +31,30 @@ Tags: blog, one-column, right-sidebar, grid-layout, wide-blocks, block-patterns,
 	descent-override: 22.52%;
 	line-gap-override: 0%;
 	size-adjust: 107.12%;
+}
+
+/*
+ * Metric-matched fallbacks for Source Serif 4 (Editorial typography variation).
+ * Local fonts only: nothing downloads unless the variation is active.
+ */
+@font-face {
+	font-family: "Source Serif Fallback";
+	src: local("Georgia");
+	font-weight: 400;
+	ascent-override: 95.4%;
+	descent-override: 30.85%;
+	line-gap-override: 0%;
+	size-adjust: 108.6%;
+}
+
+@font-face {
+	font-family: "Source Serif Fallback";
+	src: local("Georgia Bold"), local("Georgia-Bold");
+	font-weight: 700;
+	ascent-override: 107.82%;
+	descent-override: 34.86%;
+	line-gap-override: 0%;
+	size-adjust: 96.09%;
 }
 
 /* Header, main and footer sit flush; templates space themselves with padding. */
