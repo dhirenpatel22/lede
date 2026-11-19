@@ -39,7 +39,7 @@ lede/
 | Template | Use |
 |---|---|
 | `home` / `index` | Blog listing: responsive grid, up to 3 columns |
-| `single` | Post: category, title, date/author/reading time, content, tags, author box (avatar, name, bio), prev/next, comments |
+| `single` | Post: breadcrumbs (Home / category / title), title, date/author/reading time, content, tags, author box (avatar, name, bio), prev/next, comments |
 | `single-with-sidebar` | **Post with Sidebar**: content + 48px gap + 300px sidebar from 1024px; the sidebar drops below the article on smaller screens |
 | `page` | Title, featured image, content |
 | `page-no-title` | **Page (No Title)**: for landing pages that start with a hero pattern |

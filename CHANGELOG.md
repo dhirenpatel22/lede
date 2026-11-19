@@ -8,6 +8,7 @@
 - Author box after each post: avatar, "Written by", linked name and bio, in a Card-style group (`patterns/hidden-post-footer.php`).
 
 ### Changed
+- Single posts no longer show the category label above the title; the breadcrumb trail shows the category instead. Post listings keep their category labels.
 - **Requires WordPress 7.0** (was 6.9): the core Breadcrumbs block first ships in 7.0.
 - Post grids (blog listing and Latest posts pattern) load the `medium_large` (768px) featured image instead of the full-size file. On the Theme Unit Test data this removed about 88 KB of wasted image per card on desktop.
 

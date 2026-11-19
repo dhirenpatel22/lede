@@ -12,8 +12,6 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--60)"><!-- wp:breadcrumbs {"textColor":"muted","fontSize":"sm"} /-->
 
-<!-- wp:post-terms {"term":"category"} /-->
-
 <!-- wp:post-title {"level":1} /-->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"textColor":"muted","fontSize":"sm","layout":{"type":"flex","flexWrap":"wrap"}} -->
