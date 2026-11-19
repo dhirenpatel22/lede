@@ -23,6 +23,7 @@ lede/
 ├── functions.php           Stylesheet enqueue, editor styles, font preload,
 │                           comment-form heading level
 ├── styles/blocks/          Block style variations (theme.json partials)
+├── starter/lede-child/     Starter child theme (not in the WordPress.org ZIP)
 ├── templates/              index, home, single, single-with-sidebar, page,
 │                           page-full-width ("Wide Page"), page-no-title,
 │                           archive, author, search, 404
@@ -194,6 +195,8 @@ What keeps the vitals good in production:
 
 ## Child themes (one per client project)
 
+Start from [`starter/lede-child/`](starter/lede-child/): copy it, rename it with the `sed` line in its README, and edit. It ships with the full palette, because **a child `theme.json` preset list replaces the parent's list instead of merging with it**. A child that sets only `primary` loses the other nine colors that the patterns use. The same applies to font families, font sizes and spacing sizes.
+
 ```
 wp-content/themes/client-name/
 ├── style.css
@@ -227,7 +230,7 @@ The theme deliberately leaves these out:
 
 | Need | Typical choice |
 |---|---|
-| SEO meta, sitemaps, schema, breadcrumbs | Yoast SEO or Rank Math |
+| SEO meta, sitemaps, schema (including breadcrumb schema; the theme shows breadcrumbs with the core block) | Yoast SEO or Rank Math |
 | Security hardening (XML-RPC, headers, login, user enumeration) | Wordfence / Solid Security, or a site mu-plugin |
 | Page cache, asset cleanup (emoji, embeds, dashicons) | Host cache + WP Rocket / Perfmatters / LiteSpeed Cache |
 | Forms | Gravity Forms, WPForms or Fluent Forms |

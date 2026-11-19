@@ -5,6 +5,7 @@
 ### Added
 - Author archive template (`author.html`): avatar, author name as the `h1`, biographical info from the user profile (hidden when empty), then the post list.
 - Breadcrumbs (core Breadcrumbs block) above the title on posts, pages, Wide Pages, archives and author archives. Posts show their category trail; pages show their parent pages. Hidden on the front page.
+- `starter/lede-child/`: a starter child theme with the full palette, a stylesheet enqueue and a README covering renaming, overrides, fonts and the preset-replacement gotcha. Kept out of the WordPress.org ZIP.
 - Author box after each post: avatar, "Written by", linked name and bio, in a Card-style group (`patterns/hidden-post-footer.php`).
 
 ### Changed
