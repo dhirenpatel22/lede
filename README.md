@@ -25,7 +25,7 @@ lede/
 ├── styles/blocks/          Block style variations (theme.json partials)
 ├── templates/              index, home, single, single-with-sidebar, page,
 │                           page-full-width ("Wide Page"), page-no-title,
-│                           archive, search, 404
+│                           archive, author, search, 404
 ├── parts/                  header, footer, sidebar
 ├── patterns/               13 inserter patterns + hidden template patterns
 ├── assets/fonts/inter/     Inter variable WOFF2 (roman + italic, Latin) + OFL licence
@@ -39,12 +39,13 @@ lede/
 | Template | Use |
 |---|---|
 | `home` / `index` | Blog listing: responsive grid, up to 3 columns |
-| `single` | Post: category, title, date/author/reading time, content, tags, prev/next, comments |
+| `single` | Post: category, title, date/author/reading time, content, tags, author box (avatar, name, bio), prev/next, comments |
 | `single-with-sidebar` | **Post with Sidebar**: content + 48px gap + 300px sidebar from 1024px; the sidebar drops below the article on smaller screens |
 | `page` | Title, featured image, content |
 | `page-no-title` | **Page (No Title)**: for landing pages that start with a hero pattern |
 | `page-full-width` | **Wide Page**: regular blocks span the wide width (1200px) instead of 760px |
 | `archive`, `search` | Text-first post lists with pagination and a no-results state |
+| `author` | Author avatar, name (`h1`) and biographical info, then the post list. The bio comes from the user profile and is hidden when empty |
 | `404` | Message, search form, link home |
 
 Page and post templates (except Post with Sidebar) allow full-width (`alignfull`) blocks, and stacked full-width sections sit flush against each other.

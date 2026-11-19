@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Author archive template (`author.html`): avatar, author name as the `h1`, biographical info from the user profile (hidden when empty), then the post list.
+- Author box after each post: avatar, "Written by", linked name and bio, in a Card-style group (`patterns/hidden-post-footer.php`).
+
+### Changed
+- Post grids (blog listing and Latest posts pattern) load the `medium_large` (768px) featured image instead of the full-size file. On the Theme Unit Test data this removed about 88 KB of wasted image per card on desktop.
+
 ## 2.0.2 - 2026-11-19
 
 ### Fixed
