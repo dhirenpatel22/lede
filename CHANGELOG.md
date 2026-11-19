@@ -5,10 +5,12 @@
 ### Added
 - Author archive template (`author.html`): avatar, author name as the `h1`, biographical info from the user profile (hidden when empty), then the post list.
 - Breadcrumbs (core Breadcrumbs block) above the title on posts, pages, Wide Pages, archives and author archives. Posts show their category trail; pages show their parent pages. Hidden on the front page.
+- Style variations: **Dark** (full dark palette), **Editorial** (Source Serif 4 headings, self-hosted, 51 KB, loaded only when active, with a metric-matched Georgia fallback) and two color palettes, **Forest** and **Plum**. All pass WCAG AA for the color pairs the patterns use. Added the `style-variations` tag.
 - `starter/lede-child/`: a starter child theme with the full palette, a stylesheet enqueue and a README covering renaming, overrides, fonts and the preset-replacement gotcha. Kept out of the WordPress.org ZIP.
 - Author box after each post: avatar, "Written by", linked name and bio, in a Card-style group (`patterns/hidden-post-footer.php`).
 
 ### Changed
+- The footer divider uses the `contrast-2` color instead of a hardcoded 15% white, so it adapts to style variations.
 - Single posts no longer show the category label above the title; the breadcrumb trail shows the category instead. Post listings keep their category labels.
 - **Requires WordPress 7.0** (was 6.9): the core Breadcrumbs block first ships in 7.0.
 - Post grids (blog listing and Latest posts pattern) load the `medium_large` (768px) featured image instead of the full-size file. On the Theme Unit Test data this removed about 88 KB of wasted image per card on desktop.

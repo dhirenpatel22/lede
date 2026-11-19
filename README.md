@@ -22,6 +22,7 @@ lede/
 ├── theme.json              Design tokens, element and block styles
 ├── functions.php           Stylesheet enqueue, editor styles, font preload,
 │                           comment-form heading level
+├── styles/                dark.json, colors/ (Forest, Plum), typography/ (Editorial)
 ├── styles/blocks/          Block style variations (theme.json partials)
 ├── starter/lede-child/     Starter child theme (not in the WordPress.org ZIP)
 ├── templates/              index, home, single, single-with-sidebar, page,
@@ -30,6 +31,7 @@ lede/
 ├── parts/                  header, footer, sidebar
 ├── patterns/               13 inserter patterns + hidden template patterns
 ├── assets/fonts/inter/     Inter variable WOFF2 (roman + italic, Latin) + OFL licence
+├── assets/fonts/source-serif-4/  Source Serif 4 variable WOFF2 (Latin), Editorial variation only + OFL licence
 ├── assets/images/          SVG placeholders used by patterns (< 1 KB total)
 ├── composer.json           Dev tooling (WPCS, PHPCompatibility)
 └── phpcs.xml.dist          Coding-standards ruleset
@@ -78,6 +80,18 @@ Notes:
 - **Hero patterns contain the page's `h1`.** Use them with the **Page (No Title)** template, otherwise the page has two `h1`s.
 - Pattern buttons link to `#`. Point each one at the right page after inserting the pattern. "View all posts" in Latest posts links to the posts page (or the home page when none is set).
 - FAQ structured data comes from your SEO plugin (for example, Yoast's FAQ block), not the theme.
+
+## Style variations
+
+Site Editor → Styles → Browse styles. Every palette passes WCAG AA for the color pairs the patterns use (body text, muted and accent text on `base` and `base-2`, and `base` text on the `primary`, `accent` and `contrast` bands).
+
+| Variation | File | What changes |
+|---|---|---|
+| Dark | `styles/dark.json` | Full dark palette. The `primary`, `accent` and `contrast` bands (hero, call to action, stats, footer) become light bands with dark text. |
+| Editorial | `styles/typography/editorial.json` | Source Serif 4 (variable, 51 KB, Latin) for headings and the site title; body stays Inter. The font downloads only when this variation is active, and a metric-matched Georgia fallback keeps the swap from shifting layout. |
+| Forest, Plum | `styles/colors/` | `primary`, `primary-light`, `accent` and `accent-light` only. |
+
+Typography and color variations combine (for example Dark + Editorial). Variations replace preset lists, so each file carries the full palette or font list, as child themes must.
 
 ## Block style variations
 
