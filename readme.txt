@@ -1,6 +1,6 @@
 === Lede ===
 Contributors: dhirenpatel22
-Requires at least: 6.9
+Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
 License: GPLv2 or later
@@ -13,6 +13,8 @@ A fast, accessible block theme for blogs, publishers and business sites.
 Lede is a lightweight block theme for full site editing. It's built for speed and readability: no theme JavaScript, one self-hosted variable font, and zero layout shift.
 
 It includes blog templates, plus a post layout with a 300px sidebar. Patterns cover heroes, features, stats, testimonials, pricing, FAQ, team, logo cloud, calls to action, contact and latest posts. Layouts switch at fixed breakpoints (600, 768, 1024 and 1280px).
+
+Style variations: Dark, Editorial (Source Serif 4 headings) and two color palettes, Forest and Plum. Every palette is checked against the color pairs the patterns use.
 
 Colors meet WCAG 2.2 AA contrast, focus outlines are always visible, and every string is translatable.
 
@@ -28,10 +30,15 @@ No. Those belong in plugins so they keep working if you change themes. The theme
 
 == Changelog ==
 
-= 2.0.2 - 2026-11-19 =
-* The header menu wraps onto more lines instead of widening the page when it has many items.
-* The site title no longer wraps onto two lines when the header menu is long (600px and up).
-* Theme URI points to the WordPress.org theme page.
+= 2.1.0 - 2026-11-20 =
+* Requires WordPress 7.0 (core Breadcrumbs block).
+* Added breadcrumbs above the title on posts, pages, archives and author archives.
+* Added an author archive template (avatar, name, bio) and an author box after each post.
+* Added style variations: Dark, Editorial (Source Serif 4 headings) and the Forest and Plum color palettes.
+* Post grids load a 768px featured image instead of the full-size file.
+* Single posts show the category in the breadcrumb trail instead of a label above the title.
+* The header menu wraps instead of widening the page when it has many items, and the site title no longer wraps beside a long menu.
+* Theme URI points to the theme's home page on dhirenpatel.me.
 
 = 2.0.1 - 2026-11-08 =
 * Replaced business content in the patterns with neutral placeholder text. Removed the hardcoded email, phone and address.
@@ -74,6 +81,12 @@ Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
 License: SIL Open Font License, Version 1.1, https://openfontlicense.org
 Source: https://github.com/rsms/inter
 Files: assets/fonts/inter/Inter-Variable.woff2, assets/fonts/inter/Inter-Variable-Italic.woff2
+
+Source Serif 4 font (Editorial style variation)
+Copyright 2014-2023 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+License: SIL Open Font License, Version 1.1, https://openfontlicense.org
+Source: https://github.com/adobe-fonts/source-serif
+Files: assets/fonts/source-serif-4/SourceSerif4-Variable.woff2
 
 Placeholder images (assets/images/placeholder-landscape.svg, placeholder-portrait.svg, placeholder-logo.svg)
 Copyright 2026 Dhiren Patel. Created for this theme.

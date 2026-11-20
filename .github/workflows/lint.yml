@@ -1,0 +1,54 @@
+name: Lint
+
+# Runs on every pull request and on pushes to develop and main, so problems
+# show up before a version tag triggers the WordPress.org deploy.
+on:
+  pull_request:
+  push:
+    branches: [develop, main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+          coverage: none
+
+      - name: Install dev tools
+        run: composer install --no-interaction --no-progress
+
+      - name: PHP coding standards (WPCS + PHPCompatibilityWP)
+        run: vendor/bin/phpcs -q --report=full
+
+      - name: JSON files are valid
+        run: |
+          for f in theme.json styles/*.json styles/*/*.json; do
+            [ -f "$f" ] || continue
+            python3 -m json.tool "$f" > /dev/null || { echo "::error file=$f::Invalid JSON"; exit 1; }
+          done
+
+      - name: style.css and readme.txt headers match
+        run: |
+          status=0
+          for h in 'Requires at least' 'Tested up to' 'Requires PHP'; do
+            a=$(sed -n "s/^$h: *//p" style.css | tr -d '\r')
+            b=$(sed -n "s/^$h: *//p" readme.txt | tr -d '\r')
+            if [ "$a" != "$b" ]; then
+              echo "::error::$h differs: style.css '$a', readme.txt '$b'"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Current version has a changelog entry
+        run: |
+          v=$(sed -n 's/^Version: *//p' style.css | tr -d '\r')
+          grep -q "^= $v " readme.txt || { echo "::error::readme.txt has no '= $v' changelog entry"; exit 1; }
+          grep -q "^## $v " CHANGELOG.md || { echo "::error::CHANGELOG.md has no '## $v' entry"; exit 1; }

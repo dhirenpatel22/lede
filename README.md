@@ -2,7 +2,7 @@
 
 A lean base **parent** block theme for full site editing (FSE) WordPress sites. Each client project runs as a child theme on top of it.
 
-**Requires:** WordPress 6.9+ (for the core Time to Read block), PHP 8.0+ · **Tested up to:** WordPress 7.1
+**Requires:** WordPress 7.0+ (for the core Breadcrumbs block), PHP 8.0+ · **Tested up to:** WordPress 7.1
 
 ## Principles
 
@@ -22,13 +22,16 @@ lede/
 ├── theme.json              Design tokens, element and block styles
 ├── functions.php           Stylesheet enqueue, editor styles, font preload,
 │                           comment-form heading level
+├── styles/                dark.json, colors/ (Forest, Plum), typography/ (Editorial)
 ├── styles/blocks/          Block style variations (theme.json partials)
+├── starter/lede-child/     Starter child theme (not in the WordPress.org ZIP)
 ├── templates/              index, home, single, single-with-sidebar, page,
 │                           page-full-width ("Wide Page"), page-no-title,
-│                           archive, search, 404
+│                           archive, author, search, 404
 ├── parts/                  header, footer, sidebar
 ├── patterns/               13 inserter patterns + hidden template patterns
 ├── assets/fonts/inter/     Inter variable WOFF2 (roman + italic, Latin) + OFL licence
+├── assets/fonts/source-serif-4/  Source Serif 4 variable WOFF2 (Latin), Editorial variation only + OFL licence
 ├── assets/images/          SVG placeholders used by patterns (< 1 KB total)
 ├── composer.json           Dev tooling (WPCS, PHPCompatibility)
 └── phpcs.xml.dist          Coding-standards ruleset
@@ -39,12 +42,13 @@ lede/
 | Template | Use |
 |---|---|
 | `home` / `index` | Blog listing: responsive grid, up to 3 columns |
-| `single` | Post: category, title, date/author/reading time, content, tags, prev/next, comments |
+| `single` | Post: breadcrumbs (Home / category / title), title, date/author/reading time, content, tags, author box (avatar, name, bio), prev/next, comments |
 | `single-with-sidebar` | **Post with Sidebar**: content + 48px gap + 300px sidebar from 1024px; the sidebar drops below the article on smaller screens |
 | `page` | Title, featured image, content |
 | `page-no-title` | **Page (No Title)**: for landing pages that start with a hero pattern |
 | `page-full-width` | **Wide Page**: regular blocks span the wide width (1200px) instead of 760px |
 | `archive`, `search` | Text-first post lists with pagination and a no-results state |
+| `author` | Author avatar, name (`h1`) and biographical info, then the post list. The bio comes from the user profile and is hidden when empty |
 | `404` | Message, search form, link home |
 
 Page and post templates (except Post with Sidebar) allow full-width (`alignfull`) blocks, and stacked full-width sections sit flush against each other.
@@ -76,6 +80,18 @@ Notes:
 - **Hero patterns contain the page's `h1`.** Use them with the **Page (No Title)** template, otherwise the page has two `h1`s.
 - Pattern buttons link to `#`. Point each one at the right page after inserting the pattern. "View all posts" in Latest posts links to the posts page (or the home page when none is set).
 - FAQ structured data comes from your SEO plugin (for example, Yoast's FAQ block), not the theme.
+
+## Style variations
+
+Site Editor → Styles → Browse styles. Every palette passes WCAG AA for the color pairs the patterns use (body text, muted and accent text on `base` and `base-2`, and `base` text on the `primary`, `accent` and `contrast` bands).
+
+| Variation | File | What changes |
+|---|---|---|
+| Dark | `styles/dark.json` | Full dark palette. The `primary`, `accent` and `contrast` bands (hero, call to action, stats, footer) become light bands with dark text. |
+| Editorial | `styles/typography/editorial.json` | Source Serif 4 (variable, 51 KB, Latin) for headings and the site title; body stays Inter. The font downloads only when this variation is active, and a metric-matched Georgia fallback keeps the swap from shifting layout. |
+| Forest, Plum | `styles/colors/` | `primary`, `primary-light`, `accent` and `accent-light` only. |
+
+Typography and color variations combine (for example Dark + Editorial). Variations replace preset lists, so each file carries the full palette or font list, as child themes must.
 
 ## Block style variations
 
@@ -193,6 +209,8 @@ What keeps the vitals good in production:
 
 ## Child themes (one per client project)
 
+Start from [`starter/lede-child/`](starter/lede-child/): copy it, rename it with the `sed` line in its README, and edit. It ships with the full palette, because **a child `theme.json` preset list replaces the parent's list instead of merging with it**. A child that sets only `primary` loses the other nine colors that the patterns use. The same applies to font families, font sizes and spacing sizes.
+
 ```
 wp-content/themes/client-name/
 ├── style.css
@@ -226,7 +244,7 @@ The theme deliberately leaves these out:
 
 | Need | Typical choice |
 |---|---|
-| SEO meta, sitemaps, schema, breadcrumbs | Yoast SEO or Rank Math |
+| SEO meta, sitemaps, schema (including breadcrumb schema; the theme shows breadcrumbs with the core block) | Yoast SEO or Rank Math |
 | Security hardening (XML-RPC, headers, login, user enumeration) | Wordfence / Solid Security, or a site mu-plugin |
 | Page cache, asset cleanup (emoji, embeds, dashicons) | Host cache + WP Rocket / Perfmatters / LiteSpeed Cache |
 | Forms | Gravity Forms, WPForms or Fluent Forms |
@@ -241,16 +259,16 @@ composer zip          # builds dist/lede-<version>.zip, leaving out everything i
 
 The ZIP holds only theme files: no `vendor/`, Composer or PHPCS files, `bin/`, dotfiles, `README.md` or `CHANGELOG.md`. WordPress.org reads `readme.txt` (description, FAQ, changelog, copyright and the licences of bundled resources).
 
-Checked on 2026-10-18 against the built ZIP:
+Checked on 2026-10-18 against the built ZIP; rows marked † re-checked on 2026-11-19 (2.1.0, WordPress 7.0.9 and 7.1.4):
 
 | Check | Result |
 |---|---|
-| Theme Check plugin (what the upload runs) | Passed all 9,275 tests; one INFO note confirming the single text domain `lede` |
-| WPCS + PHPCompatibility (PHP 8.0+, WP 6.9+) | 0 errors, 0 warnings |
-| Block validation on 6.9.10 (minimum) and 7.1.3 (tested up to) | 0 invalid blocks, no missing blocks |
+| Theme Check plugin (what the upload runs) † | No errors; one INFO note confirming the single text domain `lede` |
+| WPCS + PHPCompatibility (PHP 8.0+, WP 7.0+) † | 0 errors, 0 warnings |
+| Block validation on 7.0.9 (minimum) and 7.1.4 (tested up to) † | 0 invalid blocks, no missing blocks (39 patterns, templates and parts) |
 | PHP notices with `WP_DEBUG` on (all templates, logged in and out, editor and Site Editor) | None on 6.9.10 or 7.1.3 |
 | Theme Unit Test data (57 posts + pages + archives at 390px and 1280px) | No overflow and no PHP notices; untitled posts linked from listings via their dates |
-| Third-party requests at runtime | None (font self-hosted; the only external link is the footer credit) |
+| Third-party requests at runtime † | Font self-hosted. Avatars (author box, author archive, comments) load from Gravatar, as core does; turn off **Settings → Discussion → Show Avatars** to remove them |
 | Licences | GPLv2+ theme; Inter under OFL (accepted for fonts); images and screenshot are original |
 | Tags | Only official tags from the WordPress.org feature list |
 
