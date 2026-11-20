@@ -259,7 +259,7 @@ composer zip          # builds dist/lede-<version>.zip, leaving out everything i
 
 The ZIP holds only theme files: no `vendor/`, Composer or PHPCS files, `bin/`, dotfiles, `README.md` or `CHANGELOG.md`. WordPress.org reads `readme.txt` (description, FAQ, changelog, copyright and the licences of bundled resources).
 
-Checked on 2026-10-18 against the built ZIP; rows marked † re-checked on 2026-11-19 (Unreleased, WordPress 7.0.9 and 7.1.4):
+Checked on 2026-10-18 against the built ZIP; rows marked † re-checked on 2026-11-19 (2.1.0, WordPress 7.0.9 and 7.1.4):
 
 | Check | Result |
 |---|---|

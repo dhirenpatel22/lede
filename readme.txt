@@ -30,9 +30,14 @@ No. Those belong in plugins so they keep working if you change themes. The theme
 
 == Changelog ==
 
-= 2.0.2 - 2026-11-19 =
-* The header menu wraps onto more lines instead of widening the page when it has many items.
-* The site title no longer wraps onto two lines when the header menu is long (600px and up).
+= 2.1.0 - 2026-11-20 =
+* Requires WordPress 7.0 (core Breadcrumbs block).
+* Added breadcrumbs above the title on posts, pages, archives and author archives.
+* Added an author archive template (avatar, name, bio) and an author box after each post.
+* Added style variations: Dark, Editorial (Source Serif 4 headings) and the Forest and Plum color palettes.
+* Post grids load a 768px featured image instead of the full-size file.
+* Single posts show the category in the breadcrumb trail instead of a label above the title.
+* The header menu wraps instead of widening the page when it has many items, and the site title no longer wraps beside a long menu.
 * Theme URI points to the theme's home page on dhirenpatel.me.
 
 = 2.0.1 - 2026-11-08 =
