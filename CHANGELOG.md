@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 2.1.0 - 2026-11-20
+
+Includes the 2.0.2 changes; 2.0.2 was never released to WordPress.org.
 
 ### Added
 - Author archive template (`author.html`): avatar, author name as the `h1`, biographical info from the user profile (hidden when empty), then the post list.
@@ -14,16 +16,12 @@
 - Single posts no longer show the category label above the title; the breadcrumb trail shows the category instead. Post listings keep their category labels.
 - **Requires WordPress 7.0** (was 6.9): the core Breadcrumbs block first ships in 7.0.
 - Post grids (blog listing and Latest posts pattern) load the `medium_large` (768px) featured image instead of the full-size file. On the Theme Unit Test data this removed about 88 KB of wasted image per card on desktop.
-
-## 2.0.2 - 2026-11-19
+- Theme URI points to the theme's home page on dhirenpatel.me (WordPress.org URIs are reserved for bundled themes).
+- README: pattern notes now say buttons link to `#` (the /contact/, /services/ and /about/ links were removed in 2.0.1).
 
 ### Fixed
 - The header menu wraps onto more lines instead of widening the page when it has many items.
 - The site title no longer wraps onto two lines when the header menu is long (600px and up).
-
-### Changed
-- Theme URI points to the theme's home page on dhirenpatel.me (WordPress.org URIs are reserved for bundled themes).
-- README: pattern notes now say buttons link to `#` (the /contact/, /services/ and /about/ links were removed in 2.0.1).
 
 ## 2.0.1
 
