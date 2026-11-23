@@ -1,14 +1,16 @@
 # Changelog
 
-## 2.1.1 - 2026-11-23
+## 2.2.0 - Unreleased
+
+**Existing sites render exactly as before after updating.** New front-end behaviour only applies to sites that activate Lede (or a child theme) from 2.2.0 on, through a theme mod set on `after_switch_theme` (`lede_show_starter_extras()`).
 
 ### Added
 - Appearance > About Lede (`inc/about-page.php`, loaded in the admin only): getting-started tips, bug reports on GitHub, and a link to the developer's contact page. Core admin markup only; no CSS, JS, options, remote requests or tracking parameters; requires `edit_theme_options`.
+- Newly activated sites whose homepage shows the latest posts get the Hero and Features patterns above the post grid (`lede/hidden-home-intro`, added to `home.html`), and the posts heading there becomes an `h2` "Latest posts" so the page keeps one `h1`. Static homepages and the Posts page are unchanged. No `front-page.html`, because it would replace every static homepage.
+- Newly activated sites get the footer credit "Lede theme · Powered by WordPress" (Theme URI, `rel="nofollow"`). Updated sites keep "Powered by WordPress".
 - readme FAQ: "Where can I get help?".
 
 ### Changed
-- When the homepage shows the latest posts (the default after activation), `home.html` now shows the Hero and Features patterns above the post grid, through the hidden `lede/hidden-home-intro` pattern. The posts heading becomes an `h2` "Latest posts" there, so the page keeps one `h1`. Sites with a static homepage, and the Posts page, render exactly as before. No `front-page.html` is added, because it would replace every static homepage.
-- Footer credit is now "Lede theme · Powered by WordPress". The Lede link uses the Theme URI (one theme credit plus the WordPress.org link, as the theme requirements allow), with `rel="nofollow"`.
 - `screenshot.png` retaken from a fresh install right after activation.
 - Theme description (style.css) and readme summary: positioned for blogs and as a parent theme; lists the 2.1.0 features.
 

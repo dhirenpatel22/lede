@@ -8,8 +8,8 @@
  * @package Lede
  */
 
-// When the latest posts are the homepage, the home intro's hero holds the h1.
-if ( is_front_page() && is_home() ) :
+// When the home intro shows (see hidden-home-intro.php), its hero holds the h1.
+if ( lede_show_starter_extras() && is_front_page() && is_home() ) :
 	?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading -->

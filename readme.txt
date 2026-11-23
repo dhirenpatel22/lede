@@ -34,13 +34,12 @@ For bugs and questions about the theme, open an issue at https://github.com/dhir
 
 == Changelog ==
 
-= 2.1.1 - 2026-11-23 =
-* A new site that shows its latest posts on the homepage now gets a hero and features section above the posts. Sites with a static homepage, and the Posts page, are unchanged.
-* New screenshot of the theme right after activation.
-* Updated theme description.
+= 2.2.0 - Unreleased =
+* Existing sites look and work exactly as before after updating.
+* Sites that activate Lede from this version on, with the latest posts on the homepage, get a hero and features section above the posts, and a theme credit in the footer.
 * Added Appearance > About Lede: getting-started tips and where to get help.
-* The footer credits the theme (Lede theme · Powered by WordPress).
 * Added a "Where can I get help?" FAQ.
+* New screenshot of the theme right after activation, and an updated theme description.
 
 = 2.1.0 - 2026-11-20 =
 * Requires WordPress 7.0 (core Breadcrumbs block).
