@@ -78,3 +78,7 @@ function lede_comment_form_defaults( array $defaults ): array {
 	return $defaults;
 }
 add_filter( 'comment_form_defaults', 'lede_comment_form_defaults' );
+
+if ( is_admin() ) {
+	require_once get_parent_theme_file_path( 'inc/about-page.php' );
+}

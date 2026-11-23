@@ -28,8 +28,12 @@
 <!-- wp:paragraph {"fontSize":"xs"} -->
 <p class="has-xs-font-size">
 <?php
-/* translators: %s: WordPress link. */
-printf( esc_html__( 'Powered by %s', 'lede' ), '<a href="' . esc_url( __( 'https://wordpress.org', 'lede' ) ) . '" rel="nofollow">WordPress</a>' );
+printf(
+	/* translators: 1: Lede theme link, 2: WordPress link. */
+	esc_html__( '%1$s theme · Powered by %2$s', 'lede' ),
+	'<a href="' . esc_url( wp_get_theme( get_template() )->get( 'ThemeURI' ) ) . '" rel="nofollow">Lede</a>',
+	'<a href="' . esc_url( __( 'https://wordpress.org', 'lede' ) ) . '" rel="nofollow">WordPress</a>'
+);
 ?>
 </p>
 <!-- /wp:paragraph --></div>

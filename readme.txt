@@ -6,7 +6,7 @@ Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A fast, accessible block theme for blogs, publishers and business sites.
+A fast, accessible block theme for blogs, and a clean parent for child themes.
 
 == Description ==
 
@@ -28,7 +28,19 @@ Edit a post and choose the "Post with Sidebar" template. To make it the default,
 
 No. Those belong in plugins so they keep working if you change themes. The theme outputs clean, semantic markup that works with any SEO plugin.
 
+= Where can I get help? =
+
+For bugs and questions about the theme, open an issue at https://github.com/dhirenpatel22/lede/issues. If you need help with your website itself, contact the theme's developer at https://www.dhirenpatel.me/contact/. Appearance > About Lede in your dashboard has the same links and some getting-started tips.
+
 == Changelog ==
+
+= 2.1.1 - 2026-11-23 =
+* A new site that shows its latest posts on the homepage now gets a hero and features section above the posts. Sites with a static homepage, and the Posts page, are unchanged.
+* New screenshot of the theme right after activation.
+* Updated theme description.
+* Added Appearance > About Lede: getting-started tips and where to get help.
+* The footer credits the theme (Lede theme · Powered by WordPress).
+* Added a "Where can I get help?" FAQ.
 
 = 2.1.0 - 2026-11-20 =
 * Requires WordPress 7.0 (core Breadcrumbs block).
