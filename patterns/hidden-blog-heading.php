@@ -8,6 +8,17 @@
  * @package Lede
  */
 
+// When the home intro shows (see hidden-home-intro.php), its hero holds the h1.
+if ( lede_show_starter_extras() && is_front_page() && is_home() ) :
+	?>
+<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading -->
+<h2 class="wp-block-heading"><?php esc_html_e( 'Latest posts', 'lede' ); ?></h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+	<?php
+	return;
+endif;
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|20","margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"level":1} -->

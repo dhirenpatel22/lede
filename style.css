@@ -3,11 +3,11 @@ Theme Name: Lede
 Theme URI: https://www.dhirenpatel.me/lede-wordpress-theme/
 Author: Dhiren Patel
 Author URI: https://www.dhirenpatel.me/
-Description: A fast, accessible block theme for blogs, publishers and business sites. No theme JavaScript, one self-hosted variable font and zero layout shift. Includes blog templates, a post layout with a 300px sidebar, 13 patterns (hero, features, stats, testimonials, pricing, FAQ, team and more) and fixed breakpoints at 600, 768, 1024 and 1280px.
+Description: A fast, accessible block theme for blogs, and a clean parent for child themes. No theme JavaScript, one self-hosted variable font and zero layout shift. Includes blog, archive and author templates, breadcrumbs, an author box, a post layout with a 300px sidebar, 13 patterns, four style variations (Dark, Editorial, Forest and Plum) and fixed breakpoints at 600, 768, 1024 and 1280px.
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 2.1.0
+Version: 2.2.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lede

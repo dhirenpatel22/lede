@@ -39,6 +39,16 @@ Other 2.0.1 changes:
 - The theme description no longer claims "business templates".
 - The blog heading (`patterns/hidden-blog-heading.php`) is now `alignwide`, so it lines up with the post grid.
 
+## STRICT RULE: updates must not change existing sites (Dhiren, 2026-11-23)
+
+A Lede update must not change how any existing site that uses Lede (directly or as a parent theme) looks or behaves. **If a change would affect existing sites, don't implement it in Lede.** No exceptions for "small" visual tweaks.
+
+- Treat as affecting existing sites: any change to theme.json defaults (palette values, typography, spacing, element and block styles), style.css or layout.css rules that match existing markup, the rendered HTML of templates, parts and template-referenced patterns (hidden-*, footer, query grids), template or part structure, default template choice, PHP output on the front end, and removing or renaming slugs, classes, filters or presets.
+- Allowed: new opt-in things that render nothing until a site chooses them (new patterns in the inserter, new style variations, new templates a user must pick), docs, readme, description, screenshot and translations. New front-end behaviour only behind `lede_show_starter_extras()` (set on activation from 2.2.0, so updated sites never get it).
+- Editing an existing inserter pattern file is fine: patterns are copied into content on insert, so existing pages don't change. Template-referenced patterns are not: they render live.
+- Child themes inherit element/block styles and parent CSS even with their own palettes, so "the child overrides it" is not a defence.
+- Verify every release: render the same pages with the previous release and the new one on an updated site (no activation flag) and diff the front-end HTML. Only `ver=` query strings may differ. Any other difference blocks the release.
+
 ## Rules to keep (WordPress.org required page, checked 2026-11-08)
 
 - Patterns must be presentation only: no real-looking business data, contact details, names, prices or stats.

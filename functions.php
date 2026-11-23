@@ -78,3 +78,26 @@ function lede_comment_form_defaults( array $defaults ): array {
 	return $defaults;
 }
 add_filter( 'comment_form_defaults', 'lede_comment_form_defaults' );
+
+/**
+ * Flags sites that activate Lede (or a child theme) from 2.2.0 on.
+ *
+ * The homepage intro and the footer theme credit only show where this flag
+ * is set, so sites that simply update the theme render exactly as before.
+ * Stored as a theme mod (core's per-theme settings), not a new option.
+ */
+function lede_flag_new_activation(): void {
+	set_theme_mod( 'lede_starter_extras', true );
+}
+add_action( 'after_switch_theme', 'lede_flag_new_activation' );
+
+/**
+ * Whether this site activated Lede from 2.2.0 on (see lede_flag_new_activation()).
+ */
+function lede_show_starter_extras(): bool {
+	return (bool) get_theme_mod( 'lede_starter_extras', false );
+}
+
+if ( is_admin() ) {
+	require_once get_parent_theme_file_path( 'inc/about-page.php' );
+}
